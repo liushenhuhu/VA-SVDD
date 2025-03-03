@@ -1,0 +1,1 @@
+EPOCH [1]  AP:0.5470	  AUC:0.5651 	 BEST  VAL_AP:0.5470	  VAL_AUC:0.5651 	 in epoch[1] 	 TEST    AP:0.4925	  AUC:0.5321	 EarlyStop [0] 	EPOCH [2]  AP:0.5490	  AUC:0.5683 	 BEST  VAL_AP:0.5490	  VAL_AUC:0.5683 	 in epoch[2] 	 TEST    AP:0.4803	  AUC:0.5066	 EarlyStop [1] 	

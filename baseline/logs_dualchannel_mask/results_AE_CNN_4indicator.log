@@ -1,0 +1,110 @@
+2024-01-26 16:39:14.333711
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-01-26 16:59:26.498199
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-01-26 17:09:51.312803
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-01-26 17:18:56.974306
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-01-26 17:19:31.505128
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-01-26 17:20:30.473088
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-01-26 18:19:40.444593
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-01-26 18:26:47.399399
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-01-26 18:28:29.734391
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-01-26 18:47:29.335954
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-01-26 22:19:10.993512
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-01-31 11:17:50.269255
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-01-31 11:22:26.510219
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-01-31 11:25:09.693585
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-01-31 11:27:44.554680
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-01-31 11:29:23.630114
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-01-31 11:30:48.578068
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-01-31 11:36:00.464229
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-01-31 11:39:25.054786
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-01-31 11:41:02.328559
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-01-31 11:59:45.198101
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-01-31 12:02:08.628160
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-01-31 16:52:43.611259
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-01-31 16:55:34.194751
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-01-31 17:05:11.555220
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-02-28 17:37:32.900815
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-02-28 17:40:58.301015
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-02-29 15:32:24.728291
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-02-29 15:37:33.054780
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-02-29 15:41:58.782493
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-02-29 15:43:46.804933
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-02-29 16:03:26.955635
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-02-29 16:05:15.298854
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-02-29 16:06:42.204918
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-02-29 16:07:28.783992
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-02-29 16:10:46.252468
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-02-29 16:14:30.159474
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-02-29 16:18:25.577432
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-02-29 17:11:52.198936
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-02-29 17:13:55.575047
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-02-29 17:15:27.256504
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-02-29 20:19:11.299663
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-02-29 20:20:19.376692
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-02-29 20:20:29.302838
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-02-29 20:21:17.281228
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-02-29 20:35:44.326411
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-02-29 20:37:08.687504
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-02-29 20:38:03.955827
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-02-29 20:39:55.251528
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-02-29 21:01:50.940046
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-03-27 20:19:23.900715
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-03-27 20:19:38.714510
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-03-27 20:20:24.076241
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-03-27 20:20:50.755037
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch
+2024-03-27 20:23:44.549336
+Model	Dataset	Test	AUC_mean	AUC_std	AP_mean	AP_std	Pre_mean	Pre_std	Rec_mean	Rec_std	Max_Epoch

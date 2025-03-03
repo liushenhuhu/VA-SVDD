@@ -1,0 +1,350 @@
+2024-09-27 14:06:12.246225
+SEED:1	cudb	auc:0.8273	ap:0.6068	pre:0.5985	recal:0.6220	f1:0.6100	epoch_max_point:183
+2024-09-27 14:50:49.058116
+SEED:1	cudb	auc:0.8498	ap:0.7016	pre:0.6288	recal:0.6535	f1:0.6409	epoch_max_point:52
+2024-09-27 15:16:41.968057
+SEED:1	cudb	auc:0.8597	ap:0.6812	pre:0.6288	recal:0.6535	f1:0.6409	epoch_max_point:62
+2024-09-27 19:35:33.654664
+SEED:1	cudb	auc:0.7621	ap:0.5486	pre:0.5076	recal:0.5276	f1:0.5174	epoch_max_point:13
+2024-09-27 20:54:07.472459
+SEED:1	cudb	auc:0.4988	ap:0.2732	pre:0.2121	recal:0.2205	f1:0.2162	epoch_max_point:108
+2024-09-27 21:11:50.310577
+SEED:1	cudb	auc:0.7869	ap:0.5871	pre:0.5758	recal:0.5984	f1:0.5869	epoch_max_point:118
+2024-09-27 21:39:04.549883
+SEED:1	cudb	auc:0.7869	ap:0.5871	pre:0.5758	recal:0.5984	f1:0.5869	epoch_max_point:118
+2024-09-27 21:52:00.981222
+SEED:1	cudb	auc:0.7298	ap:0.4538	pre:0.4545	recal:0.4724	f1:0.4633	epoch_max_point:12
+2024-09-28 09:14:09.495351
+SEED:1	cudb	auc:0.7371	ap:0.4532	pre:0.4697	recal:0.4882	f1:0.4788	epoch_max_point:26
+2024-09-28 09:23:55.578271
+SEED:1	cudb	auc:0.6296	ap:0.3543	pre:0.3106	recal:0.3228	f1:0.3166	epoch_max_point:6
+2024-10-04 08:10:06.187292
+SEED:1	cudb	auc:0.6832	ap:0.4585	pre:0.4867	recal:0.4867	f1:0.4867	epoch_max_point:22
+SEED:2	cudb	auc:0.7253	ap:0.4789	pre:0.4968	recal:0.5066	f1:0.5016	epoch_max_point:22
+SEED:3	cudb	auc:0.7110	ap:0.4635	pre:0.4733	recal:0.4797	f1:0.4765	epoch_max_point:3
+SEED:4	cudb	auc:0.7126	ap:0.4964	pre:0.5067	recal:0.5170	f1:0.5118	epoch_max_point:63
+SEED:5	cudb	auc:0.8045	ap:0.6060	pre:0.6065	recal:0.6225	f1:0.6144	epoch_max_point:94
+SEED:6	cudb	auc:0.7483	ap:0.5103	pre:0.4667	recal:0.4730	f1:0.4698	epoch_max_point:3
+2024-10-04 18:52:08.210568
+SEED:1	cudb	auc:0.7296	ap:0.4940	pre:0.5133	recal:0.5133	f1:0.5133	epoch_max_point:29
+SEED:2	cudb	auc:0.7031	ap:0.4661	pre:0.4968	recal:0.5066	f1:0.5016	epoch_max_point:21
+SEED:3	cudb	auc:0.7000	ap:0.4531	pre:0.4667	recal:0.4730	f1:0.4698	epoch_max_point:3
+SEED:4	cudb	auc:0.7465	ap:0.5154	pre:0.5133	recal:0.5238	f1:0.5185	epoch_max_point:19
+2024-10-04 19:01:24.566640
+SEED:1	cudb	auc:0.6899	ap:0.4623	pre:0.4667	recal:0.4667	f1:0.4667	epoch_max_point:22
+SEED:5	cudb	auc:0.8334	ap:0.6758	pre:0.6516	recal:0.6689	f1:0.6601	epoch_max_point:123
+SEED:6	cudb	auc:0.7533	ap:0.5092	pre:0.4600	recal:0.4662	f1:0.4631	epoch_max_point:3
+SEED:2	cudb	auc:0.7081	ap:0.4682	pre:0.4903	recal:0.5000	f1:0.4951	epoch_max_point:22
+SEED:3	cudb	auc:0.6998	ap:0.4529	pre:0.4667	recal:0.4730	f1:0.4698	epoch_max_point:3
+SEED:4	cudb	auc:0.7479	ap:0.5212	pre:0.5267	recal:0.5374	f1:0.5320	epoch_max_point:19
+SEED:5	cudb	auc:0.8084	ap:0.6500	pre:0.6323	recal:0.6490	f1:0.6405	epoch_max_point:95
+SEED:6	cudb	auc:0.7586	ap:0.5144	pre:0.4800	recal:0.4865	f1:0.4832	epoch_max_point:2
+2024-10-05 11:57:54.108236
+SEED:1	cudb	auc:0.6426	ap:0.4211	pre:0.4533	recal:0.4533	f1:0.4533	epoch_max_point:14
+SEED:2	cudb	auc:0.6868	ap:0.4606	pre:0.4581	recal:0.4671	f1:0.4625	epoch_max_point:22
+SEED:3	cudb	auc:0.6993	ap:0.4633	pre:0.4733	recal:0.4797	f1:0.4765	epoch_max_point:4
+SEED:4	cudb	auc:0.6572	ap:0.4316	pre:0.4333	recal:0.4422	f1:0.4377	epoch_max_point:51
+SEED:5	cudb	auc:0.6548	ap:0.4470	pre:0.4452	recal:0.4570	f1:0.4510	epoch_max_point:32
+2024-10-05 12:09:04.114366
+SEED:6	cudb	auc:0.7370	ap:0.5048	pre:0.5133	recal:0.5203	f1:0.5168	epoch_max_point:5
+SEED:1	cudb	auc:0.6633	ap:0.4507	pre:0.4133	recal:0.4133	f1:0.4133	epoch_max_point:144
+SEED:2	cudb	auc:0.7163	ap:0.4714	pre:0.4903	recal:0.5000	f1:0.4951	epoch_max_point:19
+SEED:3	cudb	auc:0.6902	ap:0.4591	pre:0.4467	recal:0.4527	f1:0.4497	epoch_max_point:128
+SEED:4	cudb	auc:0.7183	ap:0.4734	pre:0.4400	recal:0.4490	f1:0.4444	epoch_max_point:161
+SEED:5	cudb	auc:0.7262	ap:0.5184	pre:0.4903	recal:0.5033	f1:0.4967	epoch_max_point:230
+SEED:6	cudb	auc:0.7444	ap:0.5067	pre:0.4733	recal:0.4797	f1:0.4765	epoch_max_point:5
+2024-10-05 14:02:45.750869
+SEED:1	cudb	auc:0.6633	ap:0.4507	pre:0.4133	recal:0.4133	f1:0.4133	epoch_max_point:144
+SEED:2	cudb	auc:0.7163	ap:0.4714	pre:0.4903	recal:0.5000	f1:0.4951	epoch_max_point:19
+SEED:3	cudb	auc:0.6902	ap:0.4591	pre:0.4467	recal:0.4527	f1:0.4497	epoch_max_point:128
+SEED:4	cudb	auc:0.7183	ap:0.4734	pre:0.4400	recal:0.4490	f1:0.4444	epoch_max_point:161
+SEED:5	cudb	auc:0.7262	ap:0.5184	pre:0.4903	recal:0.5033	f1:0.4967	epoch_max_point:230
+SEED:6	cudb	auc:0.7444	ap:0.5067	pre:0.4733	recal:0.4797	f1:0.4765	epoch_max_point:5
+2024-10-05 17:34:49.805449
+SEED:1	cudb	auc:0.6884	ap:0.4627	pre:0.4933	recal:0.4933	f1:0.4933	epoch_max_point:22
+2024-10-05 17:38:23.316914
+SEED:2	cudb	auc:0.7057	ap:0.4634	pre:0.4839	recal:0.4934	f1:0.4886	epoch_max_point:22
+SEED:3	cudb	auc:0.7011	ap:0.4539	pre:0.4667	recal:0.4730	f1:0.4698	epoch_max_point:3
+SEED:1	cudb	auc:0.7593	ap:0.5359	pre:0.5400	recal:0.5400	f1:0.5400	epoch_max_point:98
+SEED:4	cudb	auc:0.7487	ap:0.5132	pre:0.5133	recal:0.5238	f1:0.5185	epoch_max_point:19
+SEED:2	cudb	auc:0.6453	ap:0.3902	pre:0.4194	recal:0.4276	f1:0.4235	epoch_max_point:15
+SEED:5	cudb	auc:0.8332	ap:0.6809	pre:0.6645	recal:0.6821	f1:0.6732	epoch_max_point:163
+SEED:3	cudb	auc:0.7718	ap:0.5205	pre:0.5200	recal:0.5270	f1:0.5235	epoch_max_point:128
+SEED:6	cudb	auc:0.7526	ap:0.5084	pre:0.4600	recal:0.4662	f1:0.4631	epoch_max_point:3
+SEED:4	cudb	auc:0.6934	ap:0.4505	pre:0.4667	recal:0.4762	f1:0.4714	epoch_max_point:10
+SEED:5	cudb	auc:0.8576	ap:0.7655	pre:0.6839	recal:0.7020	f1:0.6928	epoch_max_point:582
+SEED:6	cudb	auc:0.7243	ap:0.4973	pre:0.4800	recal:0.4865	f1:0.4832	epoch_max_point:2
+2024-10-06 01:27:31.988772
+SEED:1	cudb	auc:0.7072	ap:0.4732	pre:0.4600	recal:0.4600	f1:0.4600	epoch_max_point:21
+SEED:2	cudb	auc:0.7176	ap:0.4799	pre:0.5032	recal:0.5132	f1:0.5081	epoch_max_point:22
+SEED:3	cudb	auc:0.7055	ap:0.4650	pre:0.4800	recal:0.4865	f1:0.4832	epoch_max_point:2
+SEED:4	cudb	auc:0.7413	ap:0.4988	pre:0.5067	recal:0.5170	f1:0.5118	epoch_max_point:17
+SEED:5	cudb	auc:0.8349	ap:0.6995	pre:0.6452	recal:0.6623	f1:0.6536	epoch_max_point:134
+SEED:6	cudb	auc:0.8082	ap:0.6264	pre:0.5867	recal:0.5946	f1:0.5906	epoch_max_point:158
+2024-10-06 01:57:56.056326
+SEED:1	cudb	auc:0.6268	ap:0.3937	pre:0.4267	recal:0.4267	f1:0.4267	epoch_max_point:10
+SEED:2	cudb	auc:0.6370	ap:0.4097	pre:0.4129	recal:0.4211	f1:0.4169	epoch_max_point:16
+SEED:3	cudb	auc:0.6479	ap:0.4251	pre:0.4333	recal:0.4392	f1:0.4362	epoch_max_point:3
+SEED:4	cudb	auc:0.6978	ap:0.4510	pre:0.4600	recal:0.4694	f1:0.4646	epoch_max_point:6
+SEED:5	cudb	auc:0.8975	ap:0.8294	pre:0.7548	recal:0.7748	f1:0.7647	epoch_max_point:461
+SEED:6	cudb	auc:0.6806	ap:0.4685	pre:0.4733	recal:0.4797	f1:0.4765	epoch_max_point:3
+2024-10-06 17:42:36.619735
+SEED:1	cudb	auc:0.6720	ap:0.4211	pre:0.4600	recal:0.4600	f1:0.4600	epoch_max_point:15
+SEED:2	cudb	auc:0.6966	ap:0.4273	pre:0.4774	recal:0.4868	f1:0.4821	epoch_max_point:16
+2024-10-06 17:48:49.161128
+SEED:3	cudb	auc:0.7044	ap:0.4439	pre:0.4800	recal:0.4865	f1:0.4832	epoch_max_point:19
+SEED:1	cudb	auc:0.6933	ap:0.4450	pre:0.4467	recal:0.4467	f1:0.4467	epoch_max_point:12
+SEED:4	cudb	auc:0.7139	ap:0.4637	pre:0.4933	recal:0.5034	f1:0.4983	epoch_max_point:13
+SEED:2	cudb	auc:0.6309	ap:0.4361	pre:0.4194	recal:0.4276	f1:0.4235	epoch_max_point:2
+SEED:3	cudb	auc:0.6587	ap:0.4394	pre:0.4600	recal:0.4662	f1:0.4631	epoch_max_point:2
+SEED:5	cudb	auc:0.8156	ap:0.6569	pre:0.6065	recal:0.6225	f1:0.6144	epoch_max_point:291
+SEED:4	cudb	auc:0.7571	ap:0.4875	pre:0.5267	recal:0.5374	f1:0.5320	epoch_max_point:17
+SEED:6	cudb	auc:0.7365	ap:0.5025	pre:0.4867	recal:0.4932	f1:0.4899	epoch_max_point:6
+SEED:5	cudb	auc:0.7280	ap:0.4922	pre:0.5226	recal:0.5364	f1:0.5294	epoch_max_point:59
+SEED:6	cudb	auc:0.6564	ap:0.4470	pre:0.4267	recal:0.4324	f1:0.4295	epoch_max_point:6
+2024-10-06 21:46:49.065162
+SEED:1	cudb	auc:0.6887	ap:0.4360	pre:0.4867	recal:0.4867	f1:0.4867	epoch_max_point:162
+SEED:2	cudb	auc:0.7062	ap:0.4332	pre:0.4645	recal:0.4737	f1:0.4691	epoch_max_point:176
+SEED:3	cudb	auc:0.6942	ap:0.4404	pre:0.4733	recal:0.4797	f1:0.4765	epoch_max_point:188
+SEED:4	cudb	auc:0.7097	ap:0.4594	pre:0.4867	recal:0.4966	f1:0.4916	epoch_max_point:124
+SEED:5	cudb	auc:0.6848	ap:0.4414	pre:0.4581	recal:0.4702	f1:0.4641	epoch_max_point:149
+SEED:6	cudb	auc:0.7480	ap:0.5105	pre:0.4867	recal:0.4932	f1:0.4899	epoch_max_point:12
+2024-10-06 22:26:13.487395
+SEED:1	cudb	auc:0.6809	ap:0.4283	pre:0.4533	recal:0.4533	f1:0.4533	epoch_max_point:16
+SEED:2	cudb	auc:0.6932	ap:0.4266	pre:0.4645	recal:0.4737	f1:0.4691	epoch_max_point:15
+SEED:3	cudb	auc:0.7071	ap:0.4488	pre:0.4733	recal:0.4797	f1:0.4765	epoch_max_point:19
+SEED:4	cudb	auc:0.7183	ap:0.4588	pre:0.5000	recal:0.5102	f1:0.5051	epoch_max_point:14
+SEED:5	cudb	auc:0.7193	ap:0.4662	pre:0.4839	recal:0.4967	f1:0.4902	epoch_max_point:20
+SEED:6	cudb	auc:0.7302	ap:0.4925	pre:0.4867	recal:0.4932	f1:0.4899	epoch_max_point:6
+2024-10-07 15:55:58.802065
+2024-10-07 15:57:38.925609
+SEED:1	cudb	auc:0.7698	ap:0.5100	pre:0.5333	recal:0.5333	f1:0.5333	epoch_max_point:23
+SEED:1	cudb	auc:0.8476	ap:0.6715	pre:0.6733	recal:0.6733	f1:0.6733	epoch_max_point:7
+SEED:2	cudb	auc:0.7707	ap:0.4853	pre:0.5484	recal:0.5592	f1:0.5537	epoch_max_point:27
+SEED:2	cudb	auc:0.6702	ap:0.3973	pre:0.4129	recal:0.4211	f1:0.4169	epoch_max_point:3
+SEED:3	cudb	auc:0.7260	ap:0.4747	pre:0.5067	recal:0.5135	f1:0.5101	epoch_max_point:29
+SEED:3	cudb	auc:0.6349	ap:0.3799	pre:0.4067	recal:0.4122	f1:0.4094	epoch_max_point:2
+SEED:4	cudb	auc:0.7493	ap:0.4906	pre:0.5133	recal:0.5238	f1:0.5185	epoch_max_point:20
+SEED:4	cudb	auc:0.6892	ap:0.4393	pre:0.4867	recal:0.4966	f1:0.4916	epoch_max_point:2
+SEED:5	cudb	auc:0.7652	ap:0.5137	pre:0.5290	recal:0.5430	f1:0.5359	epoch_max_point:32
+SEED:5	cudb	auc:0.7283	ap:0.5681	pre:0.5677	recal:0.5828	f1:0.5752	epoch_max_point:6
+SEED:6	cudb	auc:0.7260	ap:0.4675	pre:0.5133	recal:0.5203	f1:0.5168	epoch_max_point:12
+SEED:6	cudb	auc:0.6932	ap:0.4294	pre:0.4667	recal:0.4730	f1:0.4698	epoch_max_point:2
+2024-10-07 16:32:58.508908
+SEED:1	cudb	auc:0.8805	ap:0.6692	pre:0.6364	recal:0.6614	f1:0.6486	epoch_max_point:240
+SEED:2	cudb	auc:0.8203	ap:0.5306	pre:0.5368	recal:0.5448	f1:0.5407	epoch_max_point:196
+SEED:3	cudb	auc:0.8790	ap:0.6192	pre:0.6693	recal:0.6911	f1:0.6800	epoch_max_point:76
+SEED:4	cudb	auc:0.8195	ap:0.5912	pre:0.5758	recal:0.5846	f1:0.5802	epoch_max_point:317
+SEED:5	cudb	auc:0.7124	ap:0.3920	pre:0.4167	recal:0.4231	f1:0.4198	epoch_max_point:10
+SEED:6	cudb	auc:0.8372	ap:0.5504	pre:0.5433	recal:0.5565	f1:0.5498	epoch_max_point:334
+2024-10-07 17:25:03.121633
+SEED:1	cudb	auc:0.7077	ap:0.4157	pre:0.4318	recal:0.4488	f1:0.4402	epoch_max_point:3
+SEED:2	cudb	auc:0.6844	ap:0.3969	pre:0.3971	recal:0.4030	f1:0.4000	epoch_max_point:74
+SEED:3	cudb	auc:0.6676	ap:0.3518	pre:0.2992	recal:0.3089	f1:0.3040	epoch_max_point:133
+SEED:4	cudb	auc:0.7467	ap:0.4505	pre:0.4924	recal:0.5000	f1:0.4962	epoch_max_point:3
+SEED:5	cudb	auc:0.7808	ap:0.5117	pre:0.5152	recal:0.5231	f1:0.5191	epoch_max_point:61
+SEED:6	cudb	auc:0.7711	ap:0.4521	pre:0.4488	recal:0.4597	f1:0.4542	epoch_max_point:3
+2024-10-07 18:32:36.607566
+SEED:1	cudb	auc:0.8267	ap:0.7297	pre:0.5833	recal:0.6063	f1:0.5946	epoch_max_point:223
+SEED:2	cudb	auc:0.7045	ap:0.3903	pre:0.4191	recal:0.4254	f1:0.4222	epoch_max_point:5
+SEED:3	cudb	auc:0.7102	ap:0.3816	pre:0.3780	recal:0.3902	f1:0.3840	epoch_max_point:3
+SEED:4	cudb	auc:0.7416	ap:0.4287	pre:0.4697	recal:0.4769	f1:0.4733	epoch_max_point:3
+SEED:5	cudb	auc:0.8027	ap:0.5446	pre:0.5379	recal:0.5462	f1:0.5420	epoch_max_point:155
+SEED:6	cudb	auc:0.7981	ap:0.6451	pre:0.4567	recal:0.4677	f1:0.4622	epoch_max_point:102
+2024-10-07 19:13:03.811986
+SEED:1	cudb	auc:0.8677	ap:0.7442	pre:0.6515	recal:0.6772	f1:0.6641	epoch_max_point:162
+SEED:2	cudb	auc:0.6977	ap:0.4623	pre:0.4191	recal:0.4254	f1:0.4222	epoch_max_point:2
+SEED:3	cudb	auc:0.7077	ap:0.3838	pre:0.4331	recal:0.4472	f1:0.4400	epoch_max_point:3
+SEED:4	cudb	auc:0.8529	ap:0.6480	pre:0.6667	recal:0.6769	f1:0.6718	epoch_max_point:173
+SEED:5	cudb	auc:0.8622	ap:0.6672	pre:0.6364	recal:0.6462	f1:0.6412	epoch_max_point:34
+SEED:6	cudb	auc:0.7089	ap:0.4400	pre:0.4252	recal:0.4355	f1:0.4303	epoch_max_point:2
+2024-10-07 19:40:45.855796
+SEED:1	cudb	auc:0.8699	ap:0.7160	pre:0.6742	recal:0.7008	f1:0.6873	epoch_max_point:78
+SEED:2	cudb	auc:0.8592	ap:0.6824	pre:0.5735	recal:0.5821	f1:0.5778	epoch_max_point:138
+SEED:3	cudb	auc:0.8173	ap:0.5958	pre:0.5906	recal:0.6098	f1:0.6000	epoch_max_point:587
+SEED:4	cudb	auc:0.8434	ap:0.6300	pre:0.5455	recal:0.5538	f1:0.5496	epoch_max_point:84
+SEED:5	cudb	auc:0.8138	ap:0.5578	pre:0.5682	recal:0.5769	f1:0.5725	epoch_max_point:301
+SEED:6	cudb	auc:0.8343	ap:0.6714	pre:0.5512	recal:0.5645	f1:0.5578	epoch_max_point:213
+2024-10-07 20:19:25.145449
+SEED:1	cudb	auc:0.8439	ap:0.7306	pre:0.6733	recal:0.6733	f1:0.6733	epoch_max_point:252
+SEED:2	cudb	auc:0.8198	ap:0.5913	pre:0.5742	recal:0.5855	f1:0.5798	epoch_max_point:14
+SEED:3	cudb	auc:0.8633	ap:0.7817	pre:0.7200	recal:0.7297	f1:0.7248	epoch_max_point:84
+SEED:4	cudb	auc:0.8990	ap:0.8163	pre:0.6867	recal:0.7007	f1:0.6936	epoch_max_point:40
+SEED:5	cudb	auc:0.8214	ap:0.7225	pre:0.6323	recal:0.6490	f1:0.6405	epoch_max_point:113
+SEED:6	cudb	auc:0.6769	ap:0.4591	pre:0.4400	recal:0.4459	f1:0.4430	epoch_max_point:2
+2024-10-07 21:32:40.550781
+SEED:1	cudb	auc:0.6997	ap:0.5599	pre:0.4133	recal:0.4133	f1:0.4133	epoch_max_point:189
+SEED:2	cudb	auc:0.6467	ap:0.5246	pre:0.4129	recal:0.4211	f1:0.4169	epoch_max_point:241
+SEED:3	cudb	auc:0.6191	ap:0.4251	pre:0.3733	recal:0.3784	f1:0.3758	epoch_max_point:321
+SEED:4	cudb	auc:0.7674	ap:0.6087	pre:0.4800	recal:0.4898	f1:0.4848	epoch_max_point:192
+SEED:5	cudb	auc:0.8055	ap:0.6154	pre:0.6387	recal:0.6556	f1:0.6471	epoch_max_point:298
+SEED:6	cudb	auc:0.7662	ap:0.6651	pre:0.5200	recal:0.5270	f1:0.5235	epoch_max_point:163
+2024-10-08 13:09:38.592738
+SEED:1	cudb	auc:0.8340	ap:0.6231	pre:0.6533	recal:0.6533	f1:0.6533	epoch_max_point:63
+SEED:2	cudb	auc:0.6224	ap:0.4194	pre:0.4065	recal:0.4145	f1:0.4104	epoch_max_point:2
+SEED:3	cudb	auc:0.7964	ap:0.5192	pre:0.5267	recal:0.5338	f1:0.5302	epoch_max_point:21
+SEED:4	cudb	auc:0.8555	ap:0.7192	pre:0.6067	recal:0.6190	f1:0.6128	epoch_max_point:45
+SEED:5	cudb	auc:0.7833	ap:0.6212	pre:0.5935	recal:0.6093	f1:0.6013	epoch_max_point:249
+SEED:6	cudb	auc:0.8840	ap:0.8056	pre:0.7400	recal:0.7500	f1:0.7450	epoch_max_point:151
+2024-10-08 13:42:58.449798
+SEED:1	cudb	auc:0.8414	ap:0.6385	pre:0.6061	recal:0.6299	f1:0.6178	epoch_max_point:201
+SEED:2	cudb	auc:0.6849	ap:0.4357	pre:0.4118	recal:0.4179	f1:0.4148	epoch_max_point:2
+SEED:3	cudb	auc:0.8301	ap:0.5059	pre:0.5591	recal:0.5772	f1:0.5680	epoch_max_point:41
+SEED:4	cudb	auc:0.8734	ap:0.6825	pre:0.5758	recal:0.5846	f1:0.5802	epoch_max_point:91
+SEED:5	cudb	auc:0.8585	ap:0.7034	pre:0.6288	recal:0.6385	f1:0.6336	epoch_max_point:243
+SEED:6	cudb	auc:0.9131	ap:0.7822	pre:0.7402	recal:0.7581	f1:0.7490	epoch_max_point:116
+2024-10-08 16:35:09.515738
+SEED:1	cudb	auc:0.7269	ap:0.4610	pre:0.5267	recal:0.5267	f1:0.5267	epoch_max_point:202
+SEED:2	cudb	auc:0.7276	ap:0.5457	pre:0.4452	recal:0.4539	f1:0.4495	epoch_max_point:170
+SEED:3	cudb	auc:0.6711	ap:0.4369	pre:0.4400	recal:0.4459	f1:0.4430	epoch_max_point:12
+SEED:4	cudb	auc:0.8505	ap:0.7657	pre:0.7067	recal:0.7211	f1:0.7138	epoch_max_point:203
+SEED:5	cudb	auc:0.7840	ap:0.6234	pre:0.6129	recal:0.6291	f1:0.6209	epoch_max_point:397
+SEED:6	cudb	auc:0.6369	ap:0.3996	pre:0.4600	recal:0.4662	f1:0.4631	epoch_max_point:2
+2024-10-08 19:30:52.433121
+SEED:1	cudb	auc:0.9085	ap:0.8078	pre:0.7267	recal:0.7267	f1:0.7267	epoch_max_point:272
+SEED:2	cudb	auc:0.6196	ap:0.4235	pre:0.4323	recal:0.4408	f1:0.4365	epoch_max_point:3
+SEED:3	cudb	auc:0.6459	ap:0.4254	pre:0.4267	recal:0.4324	f1:0.4295	epoch_max_point:2
+SEED:4	cudb	auc:0.6993	ap:0.4505	pre:0.4800	recal:0.4898	f1:0.4848	epoch_max_point:2
+SEED:5	cudb	auc:0.8687	ap:0.7552	pre:0.6903	recal:0.7086	f1:0.6993	epoch_max_point:398
+SEED:6	cudb	auc:0.6453	ap:0.4599	pre:0.4133	recal:0.4189	f1:0.4161	epoch_max_point:15
+2024-10-09 14:33:59.817819
+SEED:1	cudb	auc:0.7312	ap:0.4640	pre:0.4545	recal:0.4724	f1:0.4633	epoch_max_point:28
+SEED:2	cudb	auc:0.7415	ap:0.4330	pre:0.4485	recal:0.4552	f1:0.4519	epoch_max_point:7
+SEED:3	cudb	auc:0.7046	ap:0.3710	pre:0.4094	recal:0.4228	f1:0.4160	epoch_max_point:3
+SEED:4	cudb	auc:0.6455	ap:0.3441	pre:0.3182	recal:0.3231	f1:0.3206	epoch_max_point:40
+SEED:5	cudb	auc:0.6961	ap:0.3782	pre:0.4242	recal:0.4308	f1:0.4275	epoch_max_point:74
+SEED:6	cudb	auc:0.7478	ap:0.4262	pre:0.4803	recal:0.4919	f1:0.4861	epoch_max_point:205
+2024-10-09 14:40:11.536182
+SEED:1	cudb	auc:0.5267	ap:0.3460	pre:0.3267	recal:0.3267	f1:0.3267	epoch_max_point:15
+SEED:2	cudb	auc:0.6420	ap:0.4734	pre:0.4645	recal:0.4737	f1:0.4691	epoch_max_point:3
+SEED:3	cudb	auc:0.5379	ap:0.3472	pre:0.3133	recal:0.3176	f1:0.3154	epoch_max_point:25
+SEED:4	cudb	auc:0.5824	ap:0.3607	pre:0.3733	recal:0.3810	f1:0.3771	epoch_max_point:7
+SEED:5	cudb	auc:0.6748	ap:0.4457	pre:0.4387	recal:0.4503	f1:0.4444	epoch_max_point:31
+SEED:6	cudb	auc:0.6535	ap:0.3989	pre:0.4333	recal:0.4392	f1:0.4362	epoch_max_point:2
+2024-10-09 16:02:57.437250
+SEED:1	cudb	auc:0.7263	ap:0.4388	pre:0.4470	recal:0.4646	f1:0.4556	epoch_max_point:85
+SEED:2	cudb	auc:0.7311	ap:0.4200	pre:0.4926	recal:0.5000	f1:0.4963	epoch_max_point:86
+SEED:3	cudb	auc:0.7754	ap:0.4647	pre:0.4803	recal:0.4959	f1:0.4880	epoch_max_point:100
+SEED:4	cudb	auc:0.7410	ap:0.4586	pre:0.4697	recal:0.4769	f1:0.4733	epoch_max_point:91
+SEED:5	cudb	auc:0.7330	ap:0.4394	pre:0.4470	recal:0.4538	f1:0.4504	epoch_max_point:111
+SEED:6	cudb	auc:0.7824	ap:0.4631	pre:0.4961	recal:0.5081	f1:0.5020	epoch_max_point:67
+2024-10-09 16:38:18.385498
+SEED:1	cudb	auc:0.7208	ap:0.4975	pre:0.4800	recal:0.4800	f1:0.4800	epoch_max_point:24
+SEED:2	cudb	auc:0.7538	ap:0.4887	pre:0.5419	recal:0.5526	f1:0.5472	epoch_max_point:192
+SEED:3	cudb	auc:0.7663	ap:0.4715	pre:0.5200	recal:0.5270	f1:0.5235	epoch_max_point:24
+SEED:4	cudb	auc:0.7038	ap:0.4686	pre:0.4600	recal:0.4694	f1:0.4646	epoch_max_point:2
+SEED:5	cudb	auc:0.7017	ap:0.5317	pre:0.4839	recal:0.4967	f1:0.4902	epoch_max_point:19
+SEED:6	cudb	auc:0.6873	ap:0.4408	pre:0.4800	recal:0.4865	f1:0.4832	epoch_max_point:2
+2024-10-09 16:59:43.945647
+2024-10-09 17:00:38.162435
+2024-10-09 17:01:06.004954
+2024-10-09 17:01:24.987298
+2024-10-09 17:01:45.755612
+2024-10-09 17:02:08.372978
+2024-10-09 17:02:25.564531
+2024-10-09 17:03:10.863432
+2024-10-09 17:04:26.203680
+2024-10-09 17:04:56.068540
+2024-10-09 17:50:43.759058
+SEED:1	cudb	auc:0.5997	ap:0.3827	pre:0.3561	recal:0.3701	f1:0.3629	epoch_max_point:2
+2024-10-09 17:51:58.591827
+2024-10-09 17:52:26.011542
+2024-10-09 17:53:27.994642
+2024-10-09 17:54:01.717972
+SEED:1	cudb	auc:0.6287	ap:0.4287	pre:0.4133	recal:0.4133	f1:0.4133	epoch_max_point:211
+SEED:2	cudb	auc:0.6040	ap:0.4196	pre:0.4065	recal:0.4145	f1:0.4104	epoch_max_point:158
+SEED:3	cudb	auc:0.6981	ap:0.4648	pre:0.4733	recal:0.4797	f1:0.4765	epoch_max_point:222
+SEED:4	cudb	auc:0.7271	ap:0.4691	pre:0.4800	recal:0.4898	f1:0.4848	epoch_max_point:2
+2024-10-09 18:12:22.485380
+2024-10-09 18:13:51.253426
+2024-10-09 18:14:31.109848
+2024-10-09 18:16:16.821146
+SEED:1	cudb	auc:0.6123	ap:0.3915	pre:0.3636	recal:0.3780	f1:0.3707	epoch_max_point:2
+2024-10-09 18:17:42.060164
+2024-10-09 18:18:38.950822
+SEED:1	cudb	auc:0.7949	ap:0.6085	pre:0.5076	recal:0.5276	f1:0.5174	epoch_max_point:157
+SEED:2	cudb	auc:0.5785	ap:0.3011	pre:0.2794	recal:0.2836	f1:0.2815	epoch_max_point:3
+SEED:3	cudb	auc:0.9040	ap:0.7826	pre:0.7165	recal:0.7398	f1:0.7280	epoch_max_point:232
+SEED:4	cudb	auc:0.7842	ap:0.4605	pre:0.4621	recal:0.4692	f1:0.4656	epoch_max_point:17
+SEED:5	cudb	auc:0.7383	ap:0.5084	pre:0.5303	recal:0.5385	f1:0.5344	epoch_max_point:193
+SEED:6	cudb	auc:0.6947	ap:0.3745	pre:0.3858	recal:0.3952	f1:0.3904	epoch_max_point:7
+2024-10-09 18:28:02.682273
+SEED:1	cudb	auc:0.7981	ap:0.5117	pre:0.5076	recal:0.5276	f1:0.5174	epoch_max_point:5
+2024-10-09 18:29:37.539885
+SEED:1	cudb	auc:0.8899	ap:0.7205	pre:0.6818	recal:0.7087	f1:0.6950	epoch_max_point:666
+SEED:2	cudb	auc:0.8013	ap:0.5551	pre:0.5441	recal:0.5522	f1:0.5481	epoch_max_point:402
+SEED:3	cudb	auc:0.8861	ap:0.7560	pre:0.6378	recal:0.6585	f1:0.6480	epoch_max_point:891
+SEED:4	cudb	auc:0.8130	ap:0.5426	pre:0.5758	recal:0.5846	f1:0.5802	epoch_max_point:149
+SEED:5	cudb	auc:0.8545	ap:0.7041	pre:0.6591	recal:0.6692	f1:0.6641	epoch_max_point:622
+SEED:6	cudb	auc:0.6793	ap:0.4129	pre:0.4252	recal:0.4355	f1:0.4303	epoch_max_point:9
+2024-10-09 18:51:32.058917
+SEED:1	cudb	auc:0.7692	ap:0.4670	pre:0.4470	recal:0.4646	f1:0.4556	epoch_max_point:117
+SEED:2	cudb	auc:0.7419	ap:0.4553	pre:0.4632	recal:0.4701	f1:0.4667	epoch_max_point:86
+2024-10-09 18:54:56.397492
+SEED:1	cudb	auc:0.7833	ap:0.5006	pre:0.4848	recal:0.5039	f1:0.4942	epoch_max_point:70
+SEED:2	cudb	auc:0.7853	ap:0.5092	pre:0.5294	recal:0.5373	f1:0.5333	epoch_max_point:81
+SEED:3	cudb	auc:0.8278	ap:0.5136	pre:0.5433	recal:0.5610	f1:0.5520	epoch_max_point:31
+SEED:4	cudb	auc:0.7788	ap:0.5077	pre:0.5152	recal:0.5231	f1:0.5191	epoch_max_point:134
+2024-10-09 18:59:06.145799
+SEED:1	cudb	auc:0.6622	ap:0.4286	pre:0.3939	recal:0.4094	f1:0.4015	epoch_max_point:24
+2024-10-09 20:24:30.344573
+SEED:1	cudb	auc:0.6990	ap:0.4100	pre:0.4015	recal:0.4173	f1:0.4093	epoch_max_point:14
+SEED:2	cudb	auc:0.6859	ap:0.4084	pre:0.3603	recal:0.3657	f1:0.3630	epoch_max_point:187
+2024-10-09 20:26:34.111159
+SEED:1	cudb	auc:0.7049	ap:0.4180	pre:0.4318	recal:0.4488	f1:0.4402	epoch_max_point:84
+SEED:2	cudb	auc:0.7349	ap:0.4476	pre:0.4779	recal:0.4851	f1:0.4815	epoch_max_point:77
+SEED:3	cudb	auc:0.7533	ap:0.4448	pre:0.4882	recal:0.5041	f1:0.4960	epoch_max_point:58
+SEED:4	cudb	auc:0.7388	ap:0.4475	pre:0.5000	recal:0.5077	f1:0.5038	epoch_max_point:86
+SEED:5	cudb	auc:0.6999	ap:0.4160	pre:0.4242	recal:0.4308	f1:0.4275	epoch_max_point:71
+SEED:6	cudb	auc:0.7318	ap:0.4441	pre:0.4409	recal:0.4516	f1:0.4462	epoch_max_point:3
+2024-10-09 20:33:52.651654
+2024-10-09 20:34:18.735475
+2024-10-09 20:35:10.636482
+SEED:2	cudb	auc:0.6812	ap:0.4512	pre:0.4452	recal:0.4539	f1:0.4495	epoch_max_point:14
+SEED:3	cudb	auc:0.6941	ap:0.4616	pre:0.4867	recal:0.4932	f1:0.4899	epoch_max_point:4
+SEED:4	cudb	auc:0.6907	ap:0.4450	pre:0.4600	recal:0.4694	f1:0.4646	epoch_max_point:11
+SEED:5	cudb	auc:0.6391	ap:0.4272	pre:0.4323	recal:0.4437	f1:0.4379	epoch_max_point:28
+SEED:6	cudb	auc:0.7340	ap:0.5015	pre:0.4800	recal:0.4865	f1:0.4832	epoch_max_point:2
+2024-10-11 13:16:16.347964
+2024-10-11 13:16:27.917929
+2024-10-11 13:17:29.130721
+SEED:1	cudb	auc:0.6769	ap:0.4532	pre:0.4242	recal:0.4409	f1:0.4324	epoch_max_point:46
+SEED:1	cudb	auc:0.6772	ap:0.4641	pre:0.4167	recal:0.4331	f1:0.4247	epoch_max_point:42
+SEED:1	cudb	auc:0.7078	ap:0.4525	pre:0.4015	recal:0.4173	f1:0.4093	epoch_max_point:10
+SEED:2	cudb	auc:0.7762	ap:0.4951	pre:0.4926	recal:0.5000	f1:0.4963	epoch_max_point:14
+SEED:2	cudb	auc:0.8070	ap:0.5203	pre:0.5221	recal:0.5299	f1:0.5259	epoch_max_point:18
+SEED:2	cudb	auc:0.7807	ap:0.4922	pre:0.5074	recal:0.5149	f1:0.5111	epoch_max_point:14
+SEED:3	cudb	auc:0.7034	ap:0.4118	pre:0.4409	recal:0.4553	f1:0.4480	epoch_max_point:2
+SEED:3	cudb	auc:0.7065	ap:0.4132	pre:0.4409	recal:0.4553	f1:0.4480	epoch_max_point:2
+SEED:3	cudb	auc:0.7112	ap:0.4160	pre:0.4409	recal:0.4553	f1:0.4480	epoch_max_point:2
+SEED:4	cudb	auc:0.7075	ap:0.4516	pre:0.4621	recal:0.4692	f1:0.4656	epoch_max_point:5
+SEED:4	cudb	auc:0.7168	ap:0.4602	pre:0.4242	recal:0.4308	f1:0.4275	epoch_max_point:77
+SEED:5	cudb	auc:0.6982	ap:0.4676	pre:0.4318	recal:0.4385	f1:0.4351	epoch_max_point:173
+SEED:4	cudb	auc:0.7291	ap:0.4723	pre:0.4470	recal:0.4538	f1:0.4504	epoch_max_point:156
+SEED:5	cudb	auc:0.7235	ap:0.4966	pre:0.4545	recal:0.4615	f1:0.4580	epoch_max_point:117
+SEED:6	cudb	auc:0.7807	ap:0.4872	pre:0.5118	recal:0.5242	f1:0.5179	epoch_max_point:21
+SEED:6	cudb	auc:0.7469	ap:0.4542	pre:0.4409	recal:0.4516	f1:0.4462	epoch_max_point:19
+SEED:5	cudb	auc:0.7013	ap:0.4710	pre:0.4242	recal:0.4308	f1:0.4275	epoch_max_point:238
+SEED:6	cudb	auc:0.7339	ap:0.4397	pre:0.4331	recal:0.4435	f1:0.4382	epoch_max_point:18
+2024-10-11 17:32:18.667482
+2024-10-11 17:33:34.672169
+SEED:1	cudb	auc:0.6932	ap:0.4490	pre:0.4015	recal:0.4173	f1:0.4093	epoch_max_point:28
+SEED:1	cudb	auc:0.6717	ap:0.4366	pre:0.3939	recal:0.4094	f1:0.4015	epoch_max_point:26
+SEED:2	cudb	auc:0.7163	ap:0.4483	pre:0.4191	recal:0.4254	f1:0.4222	epoch_max_point:8
+SEED:2	cudb	auc:0.7844	ap:0.4984	pre:0.5000	recal:0.5075	f1:0.5037	epoch_max_point:11
+SEED:3	cudb	auc:0.7281	ap:0.4216	pre:0.4252	recal:0.4390	f1:0.4320	epoch_max_point:7
+SEED:3	cudb	auc:0.7482	ap:0.4402	pre:0.4488	recal:0.4634	f1:0.4560	epoch_max_point:30
+SEED:4	cudb	auc:0.7015	ap:0.4524	pre:0.4394	recal:0.4462	f1:0.4427	epoch_max_point:8
+SEED:4	cudb	auc:0.7181	ap:0.4558	pre:0.4470	recal:0.4538	f1:0.4504	epoch_max_point:7
+2024-10-11 17:42:53.891825
+SEED:5	cudb	auc:0.7091	ap:0.4458	pre:0.3939	recal:0.4000	f1:0.3969	epoch_max_point:32
+SEED:1	cudb	auc:0.6872	ap:0.4474	pre:0.4091	recal:0.4252	f1:0.4170	epoch_max_point:18
+SEED:5	cudb	auc:0.7027	ap:0.4469	pre:0.4167	recal:0.4231	f1:0.4198	epoch_max_point:34
+SEED:6	cudb	auc:0.6778	ap:0.3798	pre:0.3465	recal:0.3548	f1:0.3506	epoch_max_point:14
+SEED:2	cudb	auc:0.8075	ap:0.5282	pre:0.5441	recal:0.5522	f1:0.5481	epoch_max_point:16
+SEED:6	cudb	auc:0.7036	ap:0.4300	pre:0.4173	recal:0.4274	f1:0.4223	epoch_max_point:16
+SEED:3	cudb	auc:0.7173	ap:0.4168	pre:0.4331	recal:0.4472	f1:0.4400	epoch_max_point:2
+SEED:4	cudb	auc:0.6881	ap:0.4336	pre:0.4091	recal:0.4154	f1:0.4122	epoch_max_point:12
+SEED:5	cudb	auc:0.6893	ap:0.3801	pre:0.4318	recal:0.4385	f1:0.4351	epoch_max_point:184
+SEED:6	cudb	auc:0.6782	ap:0.3956	pre:0.3937	recal:0.4032	f1:0.3984	epoch_max_point:18
+2024-10-14 14:10:12.470774

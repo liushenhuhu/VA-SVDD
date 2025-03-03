@@ -1,0 +1,29 @@
+2024-10-07 17:31:44.599266
+SEED:1	mitbih	auc:0.7408	ap:0.5482	pre:0.6186	recal:0.6316	f1:0.6250	epoch_max_point:102
+SEED:2	mitbih	auc:0.6481	ap:0.4510	pre:0.5206	recal:0.5233	f1:0.5220	epoch_max_point:42
+SEED:3	mitbih	auc:0.7187	ap:0.5358	pre:0.5412	recal:0.5469	f1:0.5440	epoch_max_point:10
+SEED:4	mitbih	auc:0.7526	ap:0.5887	pre:0.6111	recal:0.6205	f1:0.6158	epoch_max_point:15
+SEED:5	mitbih	auc:0.8364	ap:0.6656	pre:0.6919	recal:0.6954	f1:0.6937	epoch_max_point:32
+SEED:6	mitbih	auc:0.7694	ap:0.5891	pre:0.6186	recal:0.6250	f1:0.6218	epoch_max_point:11
+2024-10-07 18:17:16.816795
+SEED:1	mitbih	auc:0.9151	ap:0.8694	pre:0.7990	recal:0.8158	f1:0.8073	epoch_max_point:27
+SEED:2	mitbih	auc:0.8440	ap:0.6826	pre:0.7062	recal:0.7098	f1:0.7080	epoch_max_point:24
+SEED:3	mitbih	auc:0.8355	ap:0.7344	pre:0.7010	recal:0.7083	f1:0.7047	epoch_max_point:41
+SEED:4	mitbih	auc:0.8940	ap:0.8416	pre:0.7525	recal:0.7641	f1:0.7583	epoch_max_point:23
+SEED:5	mitbih	auc:0.9195	ap:0.8469	pre:0.8131	recal:0.8173	f1:0.8152	epoch_max_point:17
+SEED:6	mitbih	auc:0.9154	ap:0.8403	pre:0.7732	recal:0.7812	f1:0.7772	epoch_max_point:23
+2024-10-07 18:30:42.623856
+2024-10-07 19:07:45.249415
+SEED:1	mitbih	auc:0.9151	ap:0.8694	pre:0.7990	recal:0.8158	f1:0.8073	epoch_max_point:27
+SEED:2	mitbih	auc:0.8440	ap:0.6826	pre:0.7062	recal:0.7098	f1:0.7080	epoch_max_point:24
+SEED:3	mitbih	auc:0.8355	ap:0.7344	pre:0.7010	recal:0.7083	f1:0.7047	epoch_max_point:41
+SEED:4	mitbih	auc:0.8940	ap:0.8416	pre:0.7525	recal:0.7641	f1:0.7583	epoch_max_point:23
+SEED:5	mitbih	auc:0.9195	ap:0.8469	pre:0.8131	recal:0.8173	f1:0.8152	epoch_max_point:17
+SEED:6	mitbih	auc:0.9154	ap:0.8403	pre:0.7732	recal:0.7812	f1:0.7772	epoch_max_point:23
+2024-10-07 19:51:24.945638
+SEED:1	mitbih	auc:0.8503	ap:0.8340	pre:0.6856	recal:0.7000	f1:0.6927	epoch_max_point:136
+SEED:2	mitbih	auc:0.9078	ap:0.8799	pre:0.7680	recal:0.7720	f1:0.7700	epoch_max_point:281
+SEED:3	mitbih	auc:0.9515	ap:0.9489	pre:0.8814	recal:0.8906	f1:0.8860	epoch_max_point:481
+SEED:4	mitbih	auc:0.9112	ap:0.9223	pre:0.8384	recal:0.8513	f1:0.8448	epoch_max_point:336
+SEED:5	mitbih	auc:0.9454	ap:0.9463	pre:0.8434	recal:0.8477	f1:0.8456	epoch_max_point:63
+SEED:6	mitbih	auc:0.9389	ap:0.9406	pre:0.8299	recal:0.8385	f1:0.8342	epoch_max_point:197

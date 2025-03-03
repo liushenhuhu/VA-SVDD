@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="vf-fake-promax(内网)" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false">
+    <option name="confirmBeforeUploading" value="false" />
+    <serverData>
+      <paths name="AF_Mul(内网)">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="vf-fake-promax(内网)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/yangliu/project/vf-fake-promax" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="vf-fake-promax(外网)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/yangliu/project/vf-fake-promax" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="yangliu@172.28.80.135:22 password">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="yangliu@172.28.80.135:22 password (2)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/yangliu/project/vf-fake-promax" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="yangliu@172.28.80.135:22 password (3)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/yangliu/project/vf-fake-promax" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="yangliu@172.28.80.135:22 password (4)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/yangliu/project/vf-fake-promax" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="yangliu@82.156.206.7:5023 password">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>

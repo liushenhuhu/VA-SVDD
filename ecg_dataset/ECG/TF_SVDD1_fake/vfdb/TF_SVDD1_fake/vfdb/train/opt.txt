@@ -1,0 +1,36 @@
+------------ Options -------------
+NT: cuda:2
+augmentation: fake
+batchsize: 128
+beta1: 0.5
+dataset: vfdb
+device: gpu
+early_stop: 200
+folder: 0
+gpu_ids: [0]
+isMasked: False
+is_all_data: True
+isize: 2500
+lr: 0.001
+model: TF_SVDD1_fake
+n_aug: 0
+name: TF_SVDD1_fake/vfdb
+nc: 1
+ndf: 32
+ngf: 32
+ngpu: 1
+niter: 1000
+normal_idx: 0
+numclass: 1
+nz: 64
+nz_m: 32
+outf: ./ECG/TF_SVDD1_fake/vfdb
+print_freq: 50
+seed: 1
+sigm: 1
+signal_length: [0]
+spetrum_high: [17]
+spetrum_wide: [63]
+w_adv: 1
+workers: 0
+-------------- End ----------------

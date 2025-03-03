@@ -1,0 +1,37 @@
+2024-01-26 17:30:09.139675
+Model	Dataset	Normal_Label	AUC_mean	AUC_std	AUC_MAX	AP_mean	AP_std	AP_MAX	Pre_mean	Pre_std	Pre_MAX	Rec_mean	Rec_std	Rec_MAX	Max_Epoch
+2024-01-26 17:34:12.740201
+Model	Dataset	Normal_Label	AUC_mean	AUC_std	AUC_MAX	AP_mean	AP_std	AP_MAX	Pre_mean	Pre_std	Pre_MAX	Rec_mean	Rec_std	Rec_MAX	Max_Epoch
+2024-01-26 17:38:06.144481
+Model	Dataset	Normal_Label	AUC_mean	AUC_std	AUC_MAX	AP_mean	AP_std	AP_MAX	Pre_mean	Pre_std	Pre_MAX	Rec_mean	Rec_std	Rec_MAX	Max_Epoch
+2024-01-26 17:44:41.151316
+Model	Dataset	Normal_Label	AUC_mean	AUC_std	AUC_MAX	AP_mean	AP_std	AP_MAX	Pre_mean	Pre_std	Pre_MAX	Rec_mean	Rec_std	Rec_MAX	Max_Epoch
+2024-01-26 17:48:51.853022
+Model	Dataset	Normal_Label	AUC_mean	AUC_std	AUC_MAX	AP_mean	AP_std	AP_MAX	Pre_mean	Pre_std	Pre_MAX	Rec_mean	Rec_std	Rec_MAX	Max_Epoch
+2024-01-26 17:53:38.020137
+Model	Dataset	Normal_Label	AUC_mean	AUC_std	AUC_MAX	AP_mean	AP_std	AP_MAX	Pre_mean	Pre_std	Pre_MAX	Rec_mean	Rec_std	Rec_MAX	Max_Epoch
+2024-01-26 18:44:44.127664
+Model	Dataset	Normal_Label	AUC_mean	AUC_std	AUC_MAX	AP_mean	AP_std	AP_MAX	Pre_mean	Pre_std	Pre_MAX	Rec_mean	Rec_std	Rec_MAX	Max_Epoch
+2024-01-26 18:54:47.862406
+Model	Dataset	Normal_Label	AUC_mean	AUC_std	AUC_MAX	AP_mean	AP_std	AP_MAX	Pre_mean	Pre_std	Pre_MAX	Rec_mean	Rec_std	Rec_MAX	Max_Epoch
+2024-01-26 22:21:54.678227
+Model	Dataset	Normal_Label	AUC_mean	AUC_std	AUC_MAX	AP_mean	AP_std	AP_MAX	Pre_mean	Pre_std	Pre_MAX	Rec_mean	Rec_std	Rec_MAX	Max_Epoch
+2024-01-28 10:56:43.826477
+Model	Dataset	Normal_Label	AUC_mean	AUC_std	AUC_MAX	AP_mean	AP_std	AP_MAX	Pre_mean	Pre_std	Pre_MAX	Rec_mean	Rec_std	Rec_MAX	Max_Epoch
+Ganomaly_4indicator	cpsc2021	1	0.6983	0.0526	0.7538	0.5477	0.0283	0.5842	{0: 238, 2: 194, 3: 287}
+2024-01-30 09:38:50.417351
+Model	Dataset	Normal_Label	AUC_mean	AUC_std	AUC_MAX	AP_mean	AP_std	AP_MAX	Pre_mean	Pre_std	Pre_MAX	Rec_mean	Rec_std	Rec_MAX	Max_Epoch
+2024-01-31 17:08:32.295645
+Model	Dataset	Normal_Label	AUC_mean	AUC_std	AUC_MAX	AP_mean	AP_std	AP_MAX	Pre_mean	Pre_std	Pre_MAX	Rec_mean	Rec_std	Rec_MAX	Max_Epoch
+2024-01-31 17:09:45.121609
+Model	Dataset	Normal_Label	AUC_mean	AUC_std	AUC_MAX	AP_mean	AP_std	AP_MAX	Pre_mean	Pre_std	Pre_MAX	Rec_mean	Rec_std	Rec_MAX	Max_Epoch
+2024-01-31 17:10:38.399850
+Model	Dataset	Normal_Label	AUC_mean	AUC_std	AUC_MAX	AP_mean	AP_std	AP_MAX	Pre_mean	Pre_std	Pre_MAX	Rec_mean	Rec_std	Rec_MAX	Max_Epoch
+Ganomaly_4indicator	cpsc2021	1	0.6777	0.0702	0.7500	0.5489	0.0313	0.5771	{0: 0, 2: 0, 3: 0}
+2024-02-28 17:24:41.442967
+Model	Dataset	Normal_Label	AUC_mean	AUC_std	AUC_MAX	AP_mean	AP_std	AP_MAX	Pre_mean	Pre_std	Pre_MAX	Rec_mean	Rec_std	Rec_MAX	Max_Epoch
+2024-02-28 17:44:15.713913
+Model	Dataset	Normal_Label	AUC_mean	AUC_std	AUC_MAX	AP_mean	AP_std	AP_MAX	Pre_mean	Pre_std	Pre_MAX	Rec_mean	Rec_std	Rec_MAX	Max_Epoch
+Ganomaly_4indicator	cpsc2021	1	0.6810	0.0713	0.7504	0.5504	0.0369	0.5831	{0: 0, 2: 0, 3: 0}
+2024-02-29 16:53:51.469916
+Model	Dataset	Normal_Label	AUC_mean	AUC_std	AUC_MAX	AP_mean	AP_std	AP_MAX	Pre_mean	Pre_std	Pre_MAX	Rec_mean	Rec_std	Rec_MAX	Max_Epoch

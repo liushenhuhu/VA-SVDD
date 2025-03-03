@@ -1,0 +1,265 @@
+2024-09-27 14:03:48.796453
+SEED:1	mitbih	auc:0.6490	ap:0.4455	pre:0.4948	recal:0.5053	f1:0.5000	epoch_max_point:194
+2024-09-27 14:45:37.558360
+SEED:1	mitbih	auc:0.8898	ap:0.8139	pre:0.7629	recal:0.7789	f1:0.7708	epoch_max_point:533
+2024-09-27 15:13:21.243536
+SEED:1	mitbih	auc:0.7541	ap:0.5446	pre:0.6340	recal:0.6474	f1:0.6406	epoch_max_point:282
+2024-09-27 19:33:51.433299
+SEED:1	mitbih	auc:0.8255	ap:0.6631	pre:0.6856	recal:0.7000	f1:0.6927	epoch_max_point:8
+2024-09-27 20:52:43.698200
+SEED:1	mitbih	auc:0.9550	ap:0.9289	pre:0.8557	recal:0.8737	f1:0.8646	epoch_max_point:2
+2024-09-27 21:10:18.392321
+SEED:1	mitbih	auc:0.8593	ap:0.7595	pre:0.7371	recal:0.7526	f1:0.7448	epoch_max_point:4
+2024-09-27 21:37:56.494191
+SEED:1	mitbih	auc:0.8593	ap:0.7595	pre:0.7371	recal:0.7526	f1:0.7448	epoch_max_point:4
+2024-09-27 21:49:07.026532
+SEED:1	mitbih	auc:0.7329	ap:0.5167	pre:0.5515	recal:0.5632	f1:0.5573	epoch_max_point:195
+2024-09-28 09:12:49.167070
+SEED:1	mitbih	auc:0.7839	ap:0.6599	pre:0.6907	recal:0.7053	f1:0.6979	epoch_max_point:71
+2024-09-28 09:22:27.028463
+SEED:1	mitbih	auc:0.7340	ap:0.5711	pre:0.5412	recal:0.5526	f1:0.5469	epoch_max_point:2
+2024-10-04 07:47:20.889481
+SEED:1	mitbih	auc:0.7016	ap:0.6639	pre:0.6211	recal:0.6351	f1:0.6281	epoch_max_point:2
+SEED:2	mitbih	auc:0.6434	ap:0.6088	pre:0.5903	recal:0.5929	f1:0.5916	epoch_max_point:2
+SEED:3	mitbih	auc:0.6970	ap:0.6602	pre:0.6388	recal:0.6502	f1:0.6444	epoch_max_point:2
+SEED:4	mitbih	auc:0.6639	ap:0.5359	pre:0.5903	recal:0.6036	f1:0.5969	epoch_max_point:233
+SEED:5	mitbih	auc:0.6665	ap:0.6263	pre:0.6320	recal:0.6348	f1:0.6334	epoch_max_point:2
+SEED:6	mitbih	auc:0.6526	ap:0.6255	pre:0.5727	recal:0.5830	f1:0.5778	epoch_max_point:2
+2024-10-04 18:33:07.088898
+SEED:1	mitbih	auc:0.6966	ap:0.6591	pre:0.6211	recal:0.6351	f1:0.6281	epoch_max_point:2
+SEED:2	mitbih	auc:0.6485	ap:0.6131	pre:0.5947	recal:0.5973	f1:0.5960	epoch_max_point:2
+2024-10-04 18:41:16.733439
+SEED:3	mitbih	auc:0.6694	ap:0.6520	pre:0.5859	recal:0.5964	f1:0.5911	epoch_max_point:2
+SEED:1	mitbih	auc:0.6962	ap:0.6580	pre:0.6211	recal:0.6351	f1:0.6281	epoch_max_point:2
+SEED:4	mitbih	auc:0.6532	ap:0.6416	pre:0.5771	recal:0.5901	f1:0.5835	epoch_max_point:2
+SEED:2	mitbih	auc:0.6479	ap:0.6127	pre:0.5991	recal:0.6018	f1:0.6004	epoch_max_point:2
+SEED:5	mitbih	auc:0.6392	ap:0.6140	pre:0.5801	recal:0.5826	f1:0.5813	epoch_max_point:2
+SEED:3	mitbih	auc:0.6717	ap:0.6542	pre:0.5859	recal:0.5964	f1:0.5911	epoch_max_point:2
+SEED:6	mitbih	auc:0.6300	ap:0.6047	pre:0.5551	recal:0.5650	f1:0.5600	epoch_max_point:2
+SEED:4	mitbih	auc:0.6528	ap:0.6412	pre:0.5771	recal:0.5901	f1:0.5835	epoch_max_point:2
+SEED:5	mitbih	auc:0.6356	ap:0.6095	pre:0.5714	recal:0.5739	f1:0.5727	epoch_max_point:2
+SEED:6	mitbih	auc:0.6291	ap:0.6038	pre:0.5507	recal:0.5605	f1:0.5556	epoch_max_point:2
+2024-10-05 11:38:12.283938
+SEED:1	mitbih	auc:0.6674	ap:0.6132	pre:0.6035	recal:0.6171	f1:0.6102	epoch_max_point:2
+SEED:2	mitbih	auc:0.6287	ap:0.5920	pre:0.5771	recal:0.5796	f1:0.5784	epoch_max_point:2
+SEED:3	mitbih	auc:0.6727	ap:0.6505	pre:0.5991	recal:0.6099	f1:0.6044	epoch_max_point:2
+2024-10-05 11:48:15.517788
+SEED:1	mitbih	auc:0.6735	ap:0.6200	pre:0.6035	recal:0.6171	f1:0.6102	epoch_max_point:2
+SEED:4	mitbih	auc:0.6080	ap:0.6117	pre:0.5374	recal:0.5495	f1:0.5434	epoch_max_point:2
+SEED:2	mitbih	auc:0.6378	ap:0.5981	pre:0.5815	recal:0.5841	f1:0.5828	epoch_max_point:2
+SEED:5	mitbih	auc:0.6023	ap:0.5931	pre:0.5455	recal:0.5478	f1:0.5466	epoch_max_point:2
+SEED:3	mitbih	auc:0.6766	ap:0.6536	pre:0.6123	recal:0.6233	f1:0.6178	epoch_max_point:2
+SEED:6	mitbih	auc:0.6135	ap:0.5948	pre:0.5374	recal:0.5471	f1:0.5422	epoch_max_point:2
+SEED:4	mitbih	auc:0.6133	ap:0.6174	pre:0.5374	recal:0.5495	f1:0.5434	epoch_max_point:2
+SEED:5	mitbih	auc:0.6139	ap:0.6603	pre:0.5584	recal:0.5609	f1:0.5597	epoch_max_point:175
+SEED:6	mitbih	auc:0.6228	ap:0.6007	pre:0.5463	recal:0.5561	f1:0.5511	epoch_max_point:2
+2024-10-05 13:41:33.450614
+SEED:1	mitbih	auc:0.6735	ap:0.6200	pre:0.6035	recal:0.6171	f1:0.6102	epoch_max_point:2
+SEED:2	mitbih	auc:0.6378	ap:0.5981	pre:0.5815	recal:0.5841	f1:0.5828	epoch_max_point:2
+SEED:3	mitbih	auc:0.6766	ap:0.6536	pre:0.6123	recal:0.6233	f1:0.6178	epoch_max_point:2
+SEED:4	mitbih	auc:0.6133	ap:0.6174	pre:0.5374	recal:0.5495	f1:0.5434	epoch_max_point:2
+SEED:5	mitbih	auc:0.6139	ap:0.6603	pre:0.5584	recal:0.5609	f1:0.5597	epoch_max_point:175
+SEED:6	mitbih	auc:0.6228	ap:0.6007	pre:0.5463	recal:0.5561	f1:0.5511	epoch_max_point:2
+2024-10-05 17:04:50.311474
+SEED:1	mitbih	auc:0.6971	ap:0.6605	pre:0.6211	recal:0.6351	f1:0.6281	epoch_max_point:2
+SEED:2	mitbih	auc:0.6492	ap:0.6135	pre:0.5947	recal:0.5973	f1:0.5960	epoch_max_point:2
+2024-10-05 17:16:18.227461
+SEED:3	mitbih	auc:0.7530	ap:0.7680	pre:0.6564	recal:0.6682	f1:0.6622	epoch_max_point:163
+SEED:1	mitbih	auc:0.6532	ap:0.5769	pre:0.5815	recal:0.5946	f1:0.5880	epoch_max_point:2
+SEED:4	mitbih	auc:0.7247	ap:0.7445	pre:0.6211	recal:0.6351	f1:0.6281	epoch_max_point:178
+SEED:2	mitbih	auc:0.6328	ap:0.5855	pre:0.5639	recal:0.5664	f1:0.5651	epoch_max_point:2
+SEED:3	mitbih	auc:0.6766	ap:0.6362	pre:0.6079	recal:0.6188	f1:0.6133	epoch_max_point:2
+SEED:5	mitbih	auc:0.7301	ap:0.7497	pre:0.6667	recal:0.6696	f1:0.6681	epoch_max_point:160
+SEED:4	mitbih	auc:0.6223	ap:0.6087	pre:0.5815	recal:0.5946	f1:0.5880	epoch_max_point:2
+SEED:5	mitbih	auc:0.5696	ap:0.5576	pre:0.5108	recal:0.5130	f1:0.5119	epoch_max_point:2
+SEED:6	mitbih	auc:0.7276	ap:0.7249	pre:0.6476	recal:0.6592	f1:0.6533	epoch_max_point:152
+SEED:6	mitbih	auc:0.6085	ap:0.5839	pre:0.5374	recal:0.5471	f1:0.5422	epoch_max_point:2
+2024-10-06 01:05:20.114007
+SEED:1	mitbih	auc:0.7003	ap:0.6603	pre:0.6167	recal:0.6306	f1:0.6236	epoch_max_point:2
+SEED:2	mitbih	auc:0.6720	ap:0.6333	pre:0.6079	recal:0.6106	f1:0.6093	epoch_max_point:2
+SEED:3	mitbih	auc:0.6989	ap:0.6813	pre:0.6211	recal:0.6323	f1:0.6267	epoch_max_point:2
+SEED:4	mitbih	auc:0.6731	ap:0.6364	pre:0.6035	recal:0.6171	f1:0.6102	epoch_max_point:2
+2024-10-06 01:19:21.398326
+SEED:1	mitbih	auc:0.6572	ap:0.5913	pre:0.5771	recal:0.5901	f1:0.5835	epoch_max_point:2
+SEED:5	mitbih	auc:0.6522	ap:0.5523	pre:0.6190	recal:0.6217	f1:0.6204	epoch_max_point:70
+SEED:2	mitbih	auc:0.6486	ap:0.5982	pre:0.5683	recal:0.5708	f1:0.5695	epoch_max_point:2
+SEED:6	mitbih	auc:0.6121	ap:0.5824	pre:0.5374	recal:0.5471	f1:0.5422	epoch_max_point:2
+SEED:3	mitbih	auc:0.6739	ap:0.6446	pre:0.6123	recal:0.6233	f1:0.6178	epoch_max_point:2
+SEED:4	mitbih	auc:0.8688	ap:0.8360	pre:0.7445	recal:0.7613	f1:0.7528	epoch_max_point:226
+SEED:5	mitbih	auc:0.8692	ap:0.8582	pre:0.7835	recal:0.7870	f1:0.7852	epoch_max_point:228
+SEED:6	mitbih	auc:0.8806	ap:0.8556	pre:0.7753	recal:0.7892	f1:0.7822	epoch_max_point:337
+2024-10-06 17:03:40.250000
+2024-10-06 17:05:04.548655
+SEED:1	mitbih	auc:0.6939	ap:0.6360	pre:0.6035	recal:0.6171	f1:0.6102	epoch_max_point:2
+SEED:1	mitbih	auc:0.6717	ap:0.6069	pre:0.5947	recal:0.6081	f1:0.6013	epoch_max_point:2
+SEED:2	mitbih	auc:0.7668	ap:0.7839	pre:0.6520	recal:0.6549	f1:0.6534	epoch_max_point:202
+SEED:3	mitbih	auc:0.6779	ap:0.6375	pre:0.6167	recal:0.6278	f1:0.6222	epoch_max_point:2
+SEED:4	mitbih	auc:0.7194	ap:0.6180	pre:0.6432	recal:0.6577	f1:0.6503	epoch_max_point:226
+SEED:2	mitbih	auc:0.8318	ap:0.8085	pre:0.7313	recal:0.7345	f1:0.7329	epoch_max_point:777
+SEED:3	mitbih	auc:0.6855	ap:0.6741	pre:0.5947	recal:0.6054	f1:0.6000	epoch_max_point:3
+SEED:5	mitbih	auc:0.7573	ap:0.7563	pre:0.7056	recal:0.7087	f1:0.7072	epoch_max_point:249
+SEED:4	mitbih	auc:0.7219	ap:0.5866	pre:0.6432	recal:0.6577	f1:0.6503	epoch_max_point:47
+SEED:6	mitbih	auc:0.7972	ap:0.7812	pre:0.7004	recal:0.7130	f1:0.7067	epoch_max_point:213
+SEED:5	mitbih	auc:0.6289	ap:0.5186	pre:0.5758	recal:0.5783	f1:0.5770	epoch_max_point:36
+SEED:6	mitbih	auc:0.6834	ap:0.5679	pre:0.6300	recal:0.6413	f1:0.6356	epoch_max_point:85
+2024-10-06 21:25:19.403525
+SEED:1	mitbih	auc:0.7063	ap:0.6356	pre:0.6211	recal:0.6351	f1:0.6281	epoch_max_point:2
+SEED:2	mitbih	auc:0.6795	ap:0.6136	pre:0.5639	recal:0.5664	f1:0.5651	epoch_max_point:2
+SEED:3	mitbih	auc:0.7395	ap:0.6724	pre:0.6300	recal:0.6413	f1:0.6356	epoch_max_point:2
+SEED:4	mitbih	auc:0.6067	ap:0.5188	pre:0.5815	recal:0.5946	f1:0.5880	epoch_max_point:2
+SEED:5	mitbih	auc:0.6284	ap:0.6025	pre:0.5758	recal:0.5783	f1:0.5770	epoch_max_point:2
+2024-10-06 21:46:10.517757
+SEED:6	mitbih	auc:0.7093	ap:0.6681	pre:0.6432	recal:0.6547	f1:0.6489	epoch_max_point:2
+SEED:1	mitbih	auc:0.6726	ap:0.6099	pre:0.5991	recal:0.6126	f1:0.6058	epoch_max_point:2
+SEED:2	mitbih	auc:0.8360	ap:0.8255	pre:0.7357	recal:0.7389	f1:0.7373	epoch_max_point:202
+SEED:3	mitbih	auc:0.6628	ap:0.5547	pre:0.5947	recal:0.6054	f1:0.6000	epoch_max_point:104
+SEED:4	mitbih	auc:0.7831	ap:0.7083	pre:0.6872	recal:0.7027	f1:0.6949	epoch_max_point:222
+SEED:5	mitbih	auc:0.8383	ap:0.8467	pre:0.7489	recal:0.7522	f1:0.7505	epoch_max_point:246
+SEED:6	mitbih	auc:0.7664	ap:0.7251	pre:0.6828	recal:0.6951	f1:0.6889	epoch_max_point:213
+2024-10-07 15:12:38.041144
+SEED:1	mitbih	auc:0.6923	ap:0.6309	pre:0.6167	recal:0.6306	f1:0.6236	epoch_max_point:2
+SEED:2	mitbih	auc:0.6368	ap:0.5832	pre:0.5727	recal:0.5752	f1:0.5740	epoch_max_point:2
+2024-10-07 15:23:52.245042
+2024-10-07 15:27:30.455040
+2024-10-07 15:27:37.760657
+SEED:1	mitbih	auc:0.6618	ap:0.5847	pre:0.5815	recal:0.5946	f1:0.5880	epoch_max_point:2
+SEED:1	mitbih	auc:0.8140	ap:0.7781	pre:0.7357	recal:0.7523	f1:0.7439	epoch_max_point:130
+SEED:2	mitbih	auc:0.6340	ap:0.5730	pre:0.5551	recal:0.5575	f1:0.5563	epoch_max_point:2
+SEED:3	mitbih	auc:0.6902	ap:0.6286	pre:0.6211	recal:0.6323	f1:0.6267	epoch_max_point:2
+SEED:2	mitbih	auc:0.6409	ap:0.5471	pre:0.5771	recal:0.5796	f1:0.5784	epoch_max_point:192
+SEED:3	mitbih	auc:0.7628	ap:0.7266	pre:0.6696	recal:0.6816	f1:0.6756	epoch_max_point:7
+SEED:4	mitbih	auc:0.7175	ap:0.6939	pre:0.6256	recal:0.6396	f1:0.6325	epoch_max_point:37
+SEED:4	mitbih	auc:0.8291	ap:0.8096	pre:0.7577	recal:0.7748	f1:0.7661	epoch_max_point:7
+SEED:5	mitbih	auc:0.7182	ap:0.6535	pre:0.6667	recal:0.6696	f1:0.6681	epoch_max_point:42
+SEED:5	mitbih	auc:0.7061	ap:0.6326	pre:0.6320	recal:0.6348	f1:0.6334	epoch_max_point:2
+SEED:6	mitbih	auc:0.6459	ap:0.6391	pre:0.5815	recal:0.5919	f1:0.5867	epoch_max_point:43
+SEED:6	mitbih	auc:0.7574	ap:0.6206	pre:0.6652	recal:0.6771	f1:0.6711	epoch_max_point:3
+2024-10-07 16:22:08.205511
+2024-10-07 16:25:09.481345
+2024-10-07 16:25:55.255640
+SEED:1	mitbih	auc:0.7179	ap:0.5769	pre:0.5619	recal:0.5737	f1:0.5677	epoch_max_point:2
+SEED:2	mitbih	auc:0.6533	ap:0.4812	pre:0.4897	recal:0.4922	f1:0.4910	epoch_max_point:12
+SEED:3	mitbih	auc:0.6183	ap:0.4777	pre:0.4381	recal:0.4427	f1:0.4404	epoch_max_point:12
+SEED:4	mitbih	auc:0.5917	ap:0.4370	pre:0.4141	recal:0.4205	f1:0.4173	epoch_max_point:14
+SEED:5	mitbih	auc:0.7382	ap:0.5820	pre:0.5657	recal:0.5685	f1:0.5671	epoch_max_point:153
+SEED:6	mitbih	auc:0.6571	ap:0.5000	pre:0.5000	recal:1.0000	f1:0.6667	epoch_max_point:1
+2024-10-07 17:07:23.182492
+SEED:1	mitbih	auc:0.7753	ap:0.6686	pre:0.5876	recal:0.6000	f1:0.5938	epoch_max_point:2
+2024-10-07 17:09:33.654225
+2024-10-07 17:10:14.477669
+SEED:1	mitbih	auc:0.9305	ap:0.8904	pre:0.8144	recal:0.8316	f1:0.8229	epoch_max_point:219
+SEED:2	mitbih	auc:0.9139	ap:0.8024	pre:0.7990	recal:0.8031	f1:0.8010	epoch_max_point:37
+SEED:3	mitbih	auc:0.9394	ap:0.8733	pre:0.8711	recal:0.8802	f1:0.8756	epoch_max_point:145
+SEED:4	mitbih	auc:0.9079	ap:0.7827	pre:0.7929	recal:0.8051	f1:0.7990	epoch_max_point:185
+SEED:5	mitbih	auc:0.9069	ap:0.8792	pre:0.7929	recal:0.7970	f1:0.7949	epoch_max_point:261
+SEED:6	mitbih	auc:0.9174	ap:0.8476	pre:0.7938	recal:0.8021	f1:0.7979	epoch_max_point:98
+2024-10-07 17:57:37.428300
+2024-10-07 18:11:40.985710
+2024-10-07 18:12:18.110966
+2024-10-07 18:12:33.978145
+SEED:1	mitbih	auc:0.9278	ap:0.9170	pre:0.7990	recal:0.8158	f1:0.8073	epoch_max_point:283
+SEED:2	mitbih	auc:0.9567	ap:0.9529	pre:0.8660	recal:0.8705	f1:0.8682	epoch_max_point:181
+SEED:3	mitbih	auc:0.5977	ap:0.4234	pre:0.4742	recal:0.4792	f1:0.4767	epoch_max_point:100
+SEED:4	mitbih	auc:0.9240	ap:0.9067	pre:0.7626	recal:0.7744	f1:0.7684	epoch_max_point:166
+SEED:5	mitbih	auc:0.9644	ap:0.9564	pre:0.8535	recal:0.8579	f1:0.8557	epoch_max_point:123
+SEED:6	mitbih	auc:0.9605	ap:0.9586	pre:0.8660	recal:0.8750	f1:0.8705	epoch_max_point:195
+2024-10-07 18:59:24.316597
+SEED:1	mitbih	auc:0.9609	ap:0.9395	pre:0.8402	recal:0.8579	f1:0.8490	epoch_max_point:252
+SEED:2	mitbih	auc:0.9692	ap:0.9624	pre:0.8866	recal:0.8912	f1:0.8889	epoch_max_point:251
+SEED:3	mitbih	auc:0.8683	ap:0.7174	pre:0.7474	recal:0.7552	f1:0.7513	epoch_max_point:218
+SEED:4	mitbih	auc:0.7900	ap:0.5980	pre:0.6515	recal:0.6615	f1:0.6565	epoch_max_point:113
+SEED:5	mitbih	auc:0.8610	ap:0.7378	pre:0.7424	recal:0.7462	f1:0.7443	epoch_max_point:35
+SEED:6	mitbih	auc:0.8189	ap:0.6580	pre:0.6753	recal:0.6823	f1:0.6788	epoch_max_point:54
+2024-10-07 19:27:19.490499
+SEED:1	mitbih	auc:0.7878	ap:0.6464	pre:0.6289	recal:0.6421	f1:0.6354	epoch_max_point:3
+SEED:2	mitbih	auc:0.9619	ap:0.9597	pre:0.8918	recal:0.8964	f1:0.8941	epoch_max_point:76
+SEED:3	mitbih	auc:0.9619	ap:0.9569	pre:0.8763	recal:0.8854	f1:0.8808	epoch_max_point:205
+SEED:4	mitbih	auc:0.9583	ap:0.9521	pre:0.8535	recal:0.8667	f1:0.8601	epoch_max_point:568
+SEED:5	mitbih	auc:0.6828	ap:0.5882	pre:0.5051	recal:0.5076	f1:0.5063	epoch_max_point:2
+SEED:6	mitbih	auc:0.9476	ap:0.9477	pre:0.8711	recal:0.8802	f1:0.8756	epoch_max_point:482
+2024-10-07 19:53:42.069600
+SEED:1	mitbih	auc:0.8448	ap:0.8218	pre:0.7621	recal:0.7793	f1:0.7706	epoch_max_point:2
+SEED:2	mitbih	auc:0.7865	ap:0.8165	pre:0.7225	recal:0.7257	f1:0.7241	epoch_max_point:135
+SEED:3	mitbih	auc:0.7276	ap:0.7505	pre:0.6696	recal:0.6816	f1:0.6756	epoch_max_point:2
+SEED:4	mitbih	auc:0.8982	ap:0.8844	pre:0.7930	recal:0.8108	f1:0.8018	epoch_max_point:52
+SEED:5	mitbih	auc:0.9082	ap:0.9331	pre:0.8355	recal:0.8391	f1:0.8373	epoch_max_point:205
+SEED:6	mitbih	auc:0.9057	ap:0.9234	pre:0.8106	recal:0.8251	f1:0.8178	epoch_max_point:39
+2024-10-07 21:03:01.834699
+SEED:1	mitbih	auc:0.5917	ap:0.5588	pre:0.5551	recal:0.5676	f1:0.5612	epoch_max_point:2
+2024-10-07 21:06:21.227878
+SEED:1	mitbih	auc:0.8337	ap:0.8118	pre:0.7225	recal:0.7387	f1:0.7305	epoch_max_point:2
+SEED:2	mitbih	auc:0.9400	ap:0.9477	pre:0.8987	recal:0.9027	f1:0.9007	epoch_max_point:157
+SEED:3	mitbih	auc:0.9227	ap:0.9138	pre:0.8238	recal:0.8386	f1:0.8311	epoch_max_point:170
+SEED:4	mitbih	auc:0.9485	ap:0.9621	pre:0.8899	recal:0.9099	f1:0.8998	epoch_max_point:685
+SEED:5	mitbih	auc:0.9414	ap:0.9503	pre:0.8961	recal:0.9000	f1:0.8980	epoch_max_point:118
+SEED:6	mitbih	auc:0.9322	ap:0.9516	pre:0.8722	recal:0.8879	f1:0.8800	epoch_max_point:216
+2024-10-08 12:40:45.045763
+SEED:1	mitbih	auc:0.5917	ap:0.5588	pre:0.5551	recal:0.5676	f1:0.5612	epoch_max_point:2
+SEED:2	mitbih	auc:0.7454	ap:0.7413	pre:0.6652	recal:0.6681	f1:0.6667	epoch_max_point:155
+SEED:3	mitbih	auc:0.6507	ap:0.6646	pre:0.6123	recal:0.6233	f1:0.6178	epoch_max_point:2
+SEED:4	mitbih	auc:0.7503	ap:0.7421	pre:0.6696	recal:0.6847	f1:0.6771	epoch_max_point:238
+SEED:5	mitbih	auc:0.8896	ap:0.8799	pre:0.8312	recal:0.8348	f1:0.8330	epoch_max_point:73
+SEED:6	mitbih	auc:0.9445	ap:0.9502	pre:0.8590	recal:0.8744	f1:0.8667	epoch_max_point:67
+2024-10-08 13:32:32.352597
+SEED:1	mitbih	auc:0.6893	ap:0.5903	pre:0.5258	recal:0.5368	f1:0.5312	epoch_max_point:2
+SEED:2	mitbih	auc:0.8215	ap:0.7431	pre:0.7062	recal:0.7098	f1:0.7080	epoch_max_point:166
+SEED:3	mitbih	auc:0.7724	ap:0.6403	pre:0.6443	recal:0.6510	f1:0.6477	epoch_max_point:2
+SEED:4	mitbih	auc:0.7065	ap:0.5543	pre:0.5808	recal:0.5897	f1:0.5852	epoch_max_point:2
+SEED:5	mitbih	auc:0.6600	ap:0.5130	pre:0.5130	recal:1.0000	f1:0.6781	epoch_max_point:1
+SEED:6	mitbih	auc:0.7652	ap:0.5875	pre:0.6340	recal:0.6406	f1:0.6373	epoch_max_point:127
+2024-10-08 15:56:47.938753
+SEED:1	mitbih	auc:0.9417	ap:0.8569	pre:0.9075	recal:0.9279	f1:0.9176	epoch_max_point:322
+SEED:2	mitbih	auc:0.9845	ap:0.9778	pre:0.9295	recal:0.9336	f1:0.9316	epoch_max_point:138
+SEED:3	mitbih	auc:0.6801	ap:0.5346	pre:0.6256	recal:0.6368	f1:0.6311	epoch_max_point:192
+SEED:4	mitbih	auc:0.8983	ap:0.8803	pre:0.8106	recal:0.8288	f1:0.8196	epoch_max_point:2
+SEED:5	mitbih	auc:0.5496	ap:0.5134	pre:0.5134	recal:1.0000	f1:0.6785	epoch_max_point:1
+SEED:6	mitbih	auc:0.9592	ap:0.9604	pre:0.8943	recal:0.9103	f1:0.9022	epoch_max_point:197
+2024-10-08 18:57:27.068117
+SEED:1	mitbih	auc:0.6702	ap:0.5989	pre:0.5859	recal:0.5991	f1:0.5924	epoch_max_point:2
+SEED:2	mitbih	auc:0.6753	ap:0.6251	pre:0.5947	recal:0.5973	f1:0.5960	epoch_max_point:2
+SEED:3	mitbih	auc:0.6683	ap:0.6588	pre:0.5727	recal:0.5830	f1:0.5778	epoch_max_point:2
+SEED:4	mitbih	auc:0.9515	ap:0.9512	pre:0.8546	recal:0.8739	f1:0.8641	epoch_max_point:280
+SEED:5	mitbih	auc:0.5597	ap:0.4836	pre:0.5411	recal:0.5435	f1:0.5423	epoch_max_point:2
+SEED:6	mitbih	auc:0.9232	ap:0.9208	pre:0.8018	recal:0.8161	f1:0.8089	epoch_max_point:311
+2024-10-11 12:51:52.829940
+SEED:1	mitbih	auc:0.8851	ap:0.8220	pre:0.7732	recal:0.7895	f1:0.7812	epoch_max_point:42
+2024-10-11 12:55:21.911519
+2024-10-11 12:56:06.321450
+SEED:1	mitbih	auc:0.7655	ap:0.5983	pre:0.6082	recal:0.6211	f1:0.6146	epoch_max_point:29
+SEED:1	mitbih	auc:0.8780	ap:0.8164	pre:0.7423	recal:0.7579	f1:0.7500	epoch_max_point:37
+SEED:2	mitbih	auc:0.9315	ap:0.8657	pre:0.8299	recal:0.8342	f1:0.8320	epoch_max_point:326
+SEED:2	mitbih	auc:0.8032	ap:0.7058	pre:0.6443	recal:0.6477	f1:0.6460	epoch_max_point:56
+SEED:2	mitbih	auc:0.9371	ap:0.8746	pre:0.8402	recal:0.8446	f1:0.8424	epoch_max_point:207
+SEED:3	mitbih	auc:0.8705	ap:0.7699	pre:0.7216	recal:0.7292	f1:0.7254	epoch_max_point:68
+SEED:3	mitbih	auc:0.8633	ap:0.7813	pre:0.7216	recal:0.7292	f1:0.7254	epoch_max_point:84
+SEED:3	mitbih	auc:0.8856	ap:0.8144	pre:0.7526	recal:0.7604	f1:0.7565	epoch_max_point:52
+SEED:4	mitbih	auc:0.9125	ap:0.8423	pre:0.7879	recal:0.8000	f1:0.7939	epoch_max_point:47
+SEED:4	mitbih	auc:0.8214	ap:0.7089	pre:0.6768	recal:0.6872	f1:0.6819	epoch_max_point:30
+SEED:4	mitbih	auc:0.7695	ap:0.7027	pre:0.6162	recal:0.6256	f1:0.6209	epoch_max_point:49
+SEED:5	mitbih	auc:0.8112	ap:0.6268	pre:0.6616	recal:0.6650	f1:0.6633	epoch_max_point:52
+SEED:5	mitbih	auc:0.7524	ap:0.6301	pre:0.5909	recal:0.5939	f1:0.5924	epoch_max_point:37
+SEED:5	mitbih	auc:0.9604	ap:0.9178	pre:0.8788	recal:0.8832	f1:0.8810	epoch_max_point:38
+SEED:6	mitbih	auc:0.8262	ap:0.7253	pre:0.6701	recal:0.6771	f1:0.6736	epoch_max_point:107
+SEED:6	mitbih	auc:0.7489	ap:0.5678	pre:0.6031	recal:0.6094	f1:0.6062	epoch_max_point:45
+SEED:6	mitbih	auc:0.8061	ap:0.7442	pre:0.6392	recal:0.6458	f1:0.6425	epoch_max_point:47
+2024-10-11 17:10:52.348379
+2024-10-11 17:12:52.473983
+SEED:1	mitbih	auc:0.9251	ap:0.9043	pre:0.7835	recal:0.8000	f1:0.7917	epoch_max_point:27
+SEED:1	mitbih	auc:0.8127	ap:0.6689	pre:0.6598	recal:0.6737	f1:0.6667	epoch_max_point:18
+SEED:2	mitbih	auc:0.7783	ap:0.6406	pre:0.6443	recal:0.6477	f1:0.6460	epoch_max_point:84
+2024-10-11 17:17:28.981822
+SEED:2	mitbih	auc:0.9474	ap:0.8912	pre:0.8505	recal:0.8549	f1:0.8527	epoch_max_point:115
+SEED:3	mitbih	auc:0.8179	ap:0.6566	pre:0.6598	recal:0.6667	f1:0.6632	epoch_max_point:130
+SEED:3	mitbih	auc:0.8745	ap:0.7506	pre:0.7268	recal:0.7344	f1:0.7306	epoch_max_point:22
+SEED:1	mitbih	auc:0.7445	ap:0.6558	pre:0.6031	recal:0.6158	f1:0.6094	epoch_max_point:214
+SEED:4	mitbih	auc:0.9086	ap:0.8060	pre:0.7980	recal:0.8103	f1:0.8041	epoch_max_point:56
+SEED:4	mitbih	auc:0.7131	ap:0.5682	pre:0.5455	recal:0.5538	f1:0.5496	epoch_max_point:39
+SEED:2	mitbih	auc:0.9479	ap:0.9219	pre:0.8505	recal:0.8549	f1:0.8527	epoch_max_point:116
+SEED:5	mitbih	auc:0.8343	ap:0.6939	pre:0.7020	recal:0.7056	f1:0.7038	epoch_max_point:116
+SEED:5	mitbih	auc:0.9137	ap:0.8741	pre:0.7929	recal:0.7970	f1:0.7949	epoch_max_point:61
+SEED:3	mitbih	auc:0.8278	ap:0.7544	pre:0.6753	recal:0.6823	f1:0.6788	epoch_max_point:67
+SEED:6	mitbih	auc:0.9010	ap:0.8294	pre:0.7835	recal:0.7917	f1:0.7876	epoch_max_point:93
+SEED:6	mitbih	auc:0.7343	ap:0.5945	pre:0.5979	recal:0.6042	f1:0.6010	epoch_max_point:63
+SEED:4	mitbih	auc:0.8368	ap:0.6433	pre:0.7172	recal:0.7282	f1:0.7226	epoch_max_point:30
+SEED:5	mitbih	auc:0.6763	ap:0.4871	pre:0.5354	recal:0.5381	f1:0.5367	epoch_max_point:162
+SEED:6	mitbih	auc:0.7054	ap:0.5193	pre:0.5567	recal:0.5625	f1:0.5596	epoch_max_point:93

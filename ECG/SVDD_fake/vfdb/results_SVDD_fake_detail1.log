@@ -1,0 +1,57 @@
+2024-10-01 19:52:02.163334
+SEED:1	vfdb	auc:0.7576	ap:0.7990	pre:0.6605	recal:0.6615	f1:0.6610	epoch_max_point:25
+SEED:2	vfdb	auc:0.6691	ap:0.6389	pre:0.5888	recal:0.6006	f1:0.5946	epoch_max_point:25
+SEED:3	vfdb	auc:0.6548	ap:0.5685	pre:0.6295	recal:0.6324	f1:0.6309	epoch_max_point:31
+SEED:4	vfdb	auc:0.6445	ap:0.5769	pre:0.5628	recal:0.5637	f1:0.5632	epoch_max_point:148
+SEED:5	vfdb	auc:0.6843	ap:0.6080	pre:0.6217	recal:0.6227	f1:0.6222	epoch_max_point:204
+SEED:6	vfdb	auc:0.7959	ap:0.7700	pre:0.6884	recal:0.6894	f1:0.6889	epoch_max_point:38
+2024-10-01 20:42:20.737549
+SEED:1	vfdb	auc:0.8580	ap:0.8420	pre:0.7271	recal:0.7283	f1:0.7277	epoch_max_point:53
+SEED:2	vfdb	auc:0.8525	ap:0.8339	pre:0.7253	recal:0.7399	f1:0.7326	epoch_max_point:154
+SEED:3	vfdb	auc:0.7988	ap:0.8069	pre:0.6667	recal:0.6698	f1:0.6682	epoch_max_point:17
+SEED:4	vfdb	auc:0.7810	ap:0.7735	pre:0.6620	recal:0.6630	f1:0.6625	epoch_max_point:117
+SEED:5	vfdb	auc:0.8152	ap:0.8125	pre:0.7178	recal:0.7189	f1:0.7184	epoch_max_point:41
+SEED:6	vfdb	auc:0.7459	ap:0.7030	pre:0.6434	recal:0.6444	f1:0.6439	epoch_max_point:72
+2024-10-01 21:16:28.144757
+SEED:1	vfdb	auc:0.8580	ap:0.8420	pre:0.7271	recal:0.7283	f1:0.7277	epoch_max_point:53
+SEED:2	vfdb	auc:0.8525	ap:0.8339	pre:0.7253	recal:0.7399	f1:0.7326	epoch_max_point:154
+SEED:3	vfdb	auc:0.7988	ap:0.8069	pre:0.6667	recal:0.6698	f1:0.6682	epoch_max_point:17
+SEED:4	vfdb	auc:0.7810	ap:0.7735	pre:0.6620	recal:0.6630	f1:0.6625	epoch_max_point:117
+SEED:5	vfdb	auc:0.8152	ap:0.8125	pre:0.7178	recal:0.7189	f1:0.7184	epoch_max_point:41
+SEED:6	vfdb	auc:0.7459	ap:0.7030	pre:0.6434	recal:0.6444	f1:0.6439	epoch_max_point:72
+2024-10-07 16:58:55.481795
+SEED:1	vfdb	auc:0.8280	ap:0.8372	pre:0.7101	recal:0.7112	f1:0.7106	epoch_max_point:70
+SEED:2	vfdb	auc:0.7800	ap:0.7228	pre:0.6798	recal:0.6935	f1:0.6866	epoch_max_point:50
+SEED:3	vfdb	auc:0.7095	ap:0.7174	pre:0.6233	recal:0.6262	f1:0.6247	epoch_max_point:94
+SEED:4	vfdb	auc:0.8010	ap:0.7752	pre:0.7163	recal:0.7174	f1:0.7168	epoch_max_point:76
+SEED:5	vfdb	auc:0.8239	ap:0.7539	pre:0.7194	recal:0.7205	f1:0.7199	epoch_max_point:73
+SEED:6	vfdb	auc:0.6973	ap:0.6406	pre:0.6388	recal:0.6398	f1:0.6393	epoch_max_point:81
+2024-10-07 17:57:04.421726
+2024-10-07 17:57:17.002931
+2024-10-07 17:58:10.426717
+SEED:1	vfdb	auc:0.7576	ap:0.7990	pre:0.6605	recal:0.6615	f1:0.6610	epoch_max_point:25
+SEED:1	vfdb	auc:0.7576	ap:0.7990	pre:0.6605	recal:0.6615	f1:0.6610	epoch_max_point:25
+SEED:2	vfdb	auc:0.6691	ap:0.6389	pre:0.5888	recal:0.6006	f1:0.5946	epoch_max_point:25
+SEED:2	vfdb	auc:0.6691	ap:0.6389	pre:0.5888	recal:0.6006	f1:0.5946	epoch_max_point:25
+SEED:3	vfdb	auc:0.6548	ap:0.5685	pre:0.6295	recal:0.6324	f1:0.6309	epoch_max_point:31
+SEED:4	vfdb	auc:0.6445	ap:0.5769	pre:0.5628	recal:0.5637	f1:0.5632	epoch_max_point:148
+SEED:3	vfdb	auc:0.6548	ap:0.5685	pre:0.6295	recal:0.6324	f1:0.6309	epoch_max_point:31
+SEED:5	vfdb	auc:0.6843	ap:0.6080	pre:0.6217	recal:0.6227	f1:0.6222	epoch_max_point:204
+SEED:4	vfdb	auc:0.6445	ap:0.5769	pre:0.5628	recal:0.5637	f1:0.5632	epoch_max_point:148
+SEED:6	vfdb	auc:0.7959	ap:0.7700	pre:0.6884	recal:0.6894	f1:0.6889	epoch_max_point:38
+SEED:5	vfdb	auc:0.6843	ap:0.6080	pre:0.6217	recal:0.6227	f1:0.6222	epoch_max_point:204
+SEED:6	vfdb	auc:0.7959	ap:0.7700	pre:0.6884	recal:0.6894	f1:0.6889	epoch_max_point:38
+2024-10-07 18:47:24.926107
+SEED:1	vfdb	auc:0.7576	ap:0.7990	pre:0.6605	recal:0.6615	f1:0.6610	epoch_max_point:25
+SEED:2	vfdb	auc:0.6691	ap:0.6389	pre:0.5888	recal:0.6006	f1:0.5946	epoch_max_point:25
+SEED:3	vfdb	auc:0.6548	ap:0.5685	pre:0.6295	recal:0.6324	f1:0.6309	epoch_max_point:31
+SEED:4	vfdb	auc:0.6445	ap:0.5769	pre:0.5628	recal:0.5637	f1:0.5632	epoch_max_point:148
+SEED:5	vfdb	auc:0.6843	ap:0.6080	pre:0.6217	recal:0.6227	f1:0.6222	epoch_max_point:204
+SEED:6	vfdb	auc:0.7959	ap:0.7700	pre:0.6884	recal:0.6894	f1:0.6889	epoch_max_point:38
+2024-10-07 19:26:17.920637
+SEED:1	vfdb	auc:0.7640	ap:0.7752	pre:0.6357	recal:0.6366	f1:0.6362	epoch_max_point:10
+SEED:2	vfdb	auc:0.8246	ap:0.8056	pre:0.7147	recal:0.7291	f1:0.7218	epoch_max_point:60
+SEED:3	vfdb	auc:0.8208	ap:0.7890	pre:0.7070	recal:0.7103	f1:0.7086	epoch_max_point:229
+SEED:4	vfdb	auc:0.7774	ap:0.7781	pre:0.6326	recal:0.6335	f1:0.6330	epoch_max_point:45
+SEED:5	vfdb	auc:0.8657	ap:0.8489	pre:0.7364	recal:0.7376	f1:0.7370	epoch_max_point:91
+SEED:6	vfdb	auc:0.7702	ap:0.7355	pre:0.6512	recal:0.6522	f1:0.6517	epoch_max_point:141
