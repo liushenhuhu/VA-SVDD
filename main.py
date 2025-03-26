@@ -15,9 +15,9 @@ opt = Options().parse()
 
 #
 DATASETS_NAME = {
-    'vfdb': 1,
-    # 'mitbih': 1,
-    # 'cudb': 1
+    # 'vfdb': 1,
+    'mitbih': 1,
+    'cudb': 1
 }
 
 SEEDS = [
@@ -30,20 +30,19 @@ SEEDS = [
 # 主实验
 if __name__ == '__main__':
 
-    # opt.lr =0.00001
-    # opt.batchsize = 32
-    opt.nz = 64
+    opt.nz = 32
     opt.isMasked = False
     opt.is_all_data = True
     opt.augmentation = 'mask'  # mask lr hrv no
     opt.NT = device
-    opt.model = 'SVDD_fake_TF'
+    opt.model = 'VASVDD_KD'
 
-    opt.alpha = 0.1 # 分类辅助任务LOSS占比
-    opt.sigm = 8 # 防止过拟合
-    opt.tf_percent =0.8 # loss中时域占比
+    opt.alpha = 0 # 辅助任务LOSS占比
+    opt.sigm = 0.2 # 防止过拟合
+    opt.tf_percent =0.5 # loss中时域占比
 
-
+    opt.batchsize = 64
+    opt.lr = 0.0001
 
     if opt.model == 'SVDD_fake_TF':
         from model.SVDD_fake_TF import ModelTrainer
@@ -55,23 +54,29 @@ if __name__ == '__main__':
         opt.augmentation = 'fake'  # mask lr hr no fft
         opt.nz = 64
         opt.nz_m = 32
+    elif opt.model == 'VASVDD_KD':
+        from model.VASVDD_KD import ModelTrainer
+        opt.temperature = 0.5 # Tsoftmax
+        opt.augmentation = 'fake'  # mask lr hr no fft
+        opt.nz = 64
+        opt.nz_m = 32
     else:
         raise Exception("no this model:{}".format(opt.model))
 
     darasets_result = {}
     for dataset_name in list(DATASETS_NAME.keys()):
         if  dataset_name == 'vfdb':
-            # 0.8049
-            opt.lr = 0.005
-            opt.batchsize = 32
+            pass
+            # opt.lr = 0.002
+            # opt.batchsize = 32
         elif dataset_name == 'mitbih':
-            # 0.9438
-            opt.lr = 0.005
-            opt.batchsize = 128
+            pass
+            # opt.lr = 0.005
+            # opt.batchsize = 128
         elif dataset_name == 'cudb':
-            #0.92
-            opt.lr = 0.0003
-            opt.batchsize = 128
+            pass
+            # opt.lr = 0.0003
+            # opt.batchsize = 128
         results_dir = './ECG/{}/{}'.format(opt.model, dataset_name)
 
         opt.outf = results_dir

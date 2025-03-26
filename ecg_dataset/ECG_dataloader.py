@@ -2,6 +2,7 @@ import torch
 import torch.utils.data as data
 import pywt
 import numpy as np
+from scipy.signal import welch
 
 from torch.utils.data import DataLoader
 from ecg_dataset import transform
@@ -65,14 +66,60 @@ def frequency_modulate2(signal,x_length, frequency_base,
 
     return vfake_signal
 def to_frequency(signal):
-    #傅里叶
-    # signal = fft(signal,axis=0)
-    # signal = np.abs(signal)
-    #小波
-    signal = pywt.wavedec(signal, 'db1', level=1)[0]
+    # 原方法 只是降采样
+    # signal = pywt.wavedec(signal, 'db4', level=2)[0]
 
+
+    for i in range(len(signal)):
+        _, signal[i] = ecg_to_freq_domain(signal[i], method='fft_amp')
+        # _,signal[i] = ecg_to_freq_domain(signal[i],method='fft_complex')
+        # _, signal[i] = ecg_to_freq_domain(signal[i], method='psd', nperseg = 512)
+
+    signal = signal.reshape(-1, 1,signal.shape[-1])
     return signal
 
+
+def ecg_to_freq_domain(signal, fs=360, method='fft_amp', nperseg=None):
+    N = len(signal)
+    if method == 'fft_amp':
+        # FFT幅度谱 (保持原始长度)
+        fft_complex = np.fft.fft(signal)
+        freqs = np.fft.fftfreq(N, 1 / fs)
+        spectrum = np.abs(fft_complex) / N * 2
+        spectrum[0] /= 2  # 修正直流分量
+
+    elif method == 'fft_complex':
+        # 原始复数FFT (科学计算用)
+        freqs = np.fft.fftfreq(N, 1 / fs)
+        spectrum = np.fft.fft(signal)
+
+    elif method == 'psd':
+        # Welch功率谱密度 (通过插值保持长度)
+        if nperseg is None:
+            nperseg = min(N, 1024)  # 自适应分段
+        freqs, psd = welch(signal, fs=fs, nperseg=nperseg, window='hann')
+        # 线性插值到原始信号长度
+        freqs_interp = np.linspace(0, fs / 2, N)
+        spectrum = np.interp(freqs_interp, freqs, psd)
+        freqs = freqs_interp
+    else:
+        raise ValueError("Method must be 'fft_amp', 'fft_complex' or 'psd'")
+
+    return freqs, spectrum
+def wavelet_transform_ecg(ecg_signal, wavelet='db6', level=6):
+    # 进行小波变换
+    coeffs = pywt.wavedec(ecg_signal, wavelet, level=level)
+
+    # 仅保留细节系数（高频信息），去除逼近系数（低频）
+    coeffs[0] = np.zeros_like(coeffs[0])  # 将最低频率部分设为0
+
+    # 进行小波重构，得到频域信号
+    freq_signal = pywt.waverec(coeffs, wavelet)
+
+    # 确保输出长度与输入一致
+    freq_signal = freq_signal[:len(ecg_signal)]
+
+    return freq_signal
 class TransformDataset_SelectChannel:
     def __init__(self, x, y, snr, fs, amplitude, p, min_winsize, is_selectwin, line_num):
         x_length =x.shape[-1]
@@ -146,9 +193,8 @@ class TransformDataset_SelectChannel:
 
 class TransformDataset_SelectChannel_2:
     def __init__(self, x, y, snr, fs, amplitude, p, min_winsize, is_selectwin, line_num):
-        x_length =x.shape[-1]  # n,12,2500
-
-
+                    # val_X, val_Y, 20, 0.05, 0.8, 0.3, 100, False, 1
+        x_length =x.shape[-1]  # n,1,2500
 
         straight = transform.ChannelStraight_1D(p=p, is_selectwin=is_selectwin)
         gussian = transform.Gussian(snr=snr, p=p, is_selectwin=is_selectwin)
@@ -170,7 +216,7 @@ class TransformDataset_SelectChannel_2:
             'fm': fm,
             'am': am,
             'bw': bw,
-            'line': straight
+            # 'line': straight # 会导致全0
         }
         trans = transform.Compose_Select(transforms_list.values(), min_winsize) #将多个变换组合在一起，并顺序应用它们
 
@@ -185,11 +231,11 @@ class TransformDataset_SelectChannel_2:
         modulated_signal = frequency_modulate2(x, x_length, 2, 0.1, 0.5, 0.5, (0.2, 0.7)) #方法2
 
         # 原数据-频域数据
-        x_F = to_frequency(x)
+        x_F = to_frequency(x.copy())
         # 伪噪声数据-频域数据
-        noisy_F =to_frequency(noisy)
+        noisy_F =to_frequency(noisy.copy())
         # 伪VF数据-频域数据
-        modulated_signal_F = to_frequency(modulated_signal)
+        modulated_signal_F = to_frequency(modulated_signal.copy())
 
         # 原数据标签
         y = np.asarray(y, dtype=np.int64)
@@ -211,7 +257,6 @@ class TransformDataset_SelectChannel_2:
         self.y_modulated_signal = torch.Tensor(y_modulated_signal)
 
     def __getitem__(self, index):
-        # 1.原数据 2.小波分解 3.标签 4.噪声 5.噪声+小波分解 6.FM调制信号 7.FM调制信号+小波分解 8.噪声标签 9.FM调制信号标签
         return self.x[index],self.noisy[index],self.modulated_signal[index], self.x_F[index],self.noisy_F[index],self.modulated_signal_F[index], self.y[index],self.y_noisy[index],self.y_modulated_signal[index]
 
     def __len__(self):
@@ -256,8 +301,8 @@ def get_dataloader(opt):
         test_dataset = RawDataset(test_X, test_Y)
     else: # 加频域
         train_dataset = TransformDataset_SelectChannel_2(train_X, train_Y, 20, 0.05, 0.8, 0.3, 100, False, 1)
-        val_dataset = RawDataset2(val_X, val_Y)
-        test_dataset = RawDataset2(test_X, test_Y)
+        val_dataset = TransformDataset_SelectChannel_2(val_X, val_Y, 20, 0.05, 0.8, 0.3, 100, False, 1)
+        test_dataset = TransformDataset_SelectChannel_2(test_X, test_Y, 20, 0.05, 0.8, 0.3, 100, False, 1)
 
     dataloader = {
         "train": DataLoader(

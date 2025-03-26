@@ -52,6 +52,13 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="yangliu@172.28.80.135:22 password (5)">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="yangliu@82.156.206.7:5023 password">
         <serverdata>
           <mappings>

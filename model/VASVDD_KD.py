@@ -1,5 +1,5 @@
-#主实验
-import datetime
+# 无伪数据增强多分类 消融实验
+# 设置α为0，并去除sigmaloss中伪异常部分
 import os
 import sys
 import time
@@ -11,12 +11,18 @@ import torch.nn.functional as F
 import torch.optim as optim
 from fastdtw import fastdtw
 
+from model.Resnet1d import ResNet1D
 from model.metric_my import evaluate
 
 dirname = os.path.dirname
 sys.path.insert(0, dirname(dirname(os.path.abspath(__file__))))
 
-
+def t_softmax(logits, temperature=1):
+    """
+    logits: 教师模型的输出 logits
+    temperature: 温度参数 T
+    """
+    return F.softmax(logits / temperature, dim=-1)
 class Encoder(nn.Module):
     def __init__(self, ngpu, opt):
         super(Encoder, self).__init__()
@@ -50,9 +56,23 @@ class classificationHead(nn.Module):
     def forward(self, z):
         out = self.classificationHead_l1(z)
         out = self.classificationHead_l2(out)
+        out = t_softmax(out)
         return out
+class Teacher(nn.Module):
+    def __init__(self, opt):
+        super(Teacher, self).__init__()
+        self.temperature = opt.temperature
+        self.resnet = ResNet1D(name='resnet18', head='linear', input_channels=1)
 
 
+        self.clisificationHead = classificationHead(opt.ngpu, opt)
+
+    def forward(self, z):
+        with torch.no_grad():
+            out = self.resnet(z)
+        out = self.clisificationHead(out)
+        out = t_softmax(out, temperature = self.temperature)
+        return out
 class base_Model(nn.Module):
     def __init__(self, opt, device):
         super(base_Model, self).__init__()
@@ -74,11 +94,28 @@ class base_Model(nn.Module):
 
         self.conv_block_F = Encoder(opt.ngpu, opt).to(device)
         self.clisificationHead_F = classificationHead(opt.ngpu, opt).to(device)
+
+
+        self.teacher_T = Teacher(opt).to(device)
+        self.teacher_T.resnet.load_state_dict(torch.load("/home/yangliu/project/vf-fake-promax/resnet_T.pth", weights_only=False)["resnet18"])
+        for param in self.teacher_T.parameters():
+            param.requires_grad = False  # 冻结参数
+
+        self.teacher_F = Teacher(opt).to(device)
+        self.teacher_F.resnet.load_state_dict(torch.load("/home/yangliu/project/vf-fake-promax/resnet_F.pth", weights_only=False)["resnet18"])
+        for param in self.teacher_F.parameters():
+            param.requires_grad = False  # 冻结参数
+
+        # self.teacher_T.load_state_dict(state_dict_load)
+        # self.teacher_F.load_state_dict(state_dict_load)
+
         # self.output_layer = nn.Linear(self.hidden_size, opt.nz * 2)
 
 
 
     def forward(self, x, x_noisy, x_fm, x_f, x_noisy_f, x_fm_f):
+        # begin_time = time.time()
+
         if torch.isnan(x).any():
             print('tensor contain nan')
         # 1D CNN feature extraction
@@ -99,14 +136,29 @@ class base_Model(nn.Module):
         z6 = torch.squeeze(z_x_fm_f)
 
         # 时域和频域分别过分类头
-        score_feature1 = self.clisificationHead_T(z1)  # 128,3
+        score_feature1 = self.clisificationHead_T(z1)  # (batchsize,3)
         score_feature2 = self.clisificationHead_T(z2)
         score_feature3 = self.clisificationHead_T(z3)
 
         score_feature4 = self.clisificationHead_F(z4)
         score_feature5 = self.clisificationHead_F(z5)
         score_feature6 = self.clisificationHead_F(z6)
-        return z1, z2, z3, z4, z5, z6, score_feature1, score_feature2, score_feature3,score_feature4, score_feature5, score_feature6
+
+
+        teacherT_feature1 = self.teacher_T(x)    #(barchsize,3)
+        teacherT_feature2 = self.teacher_T(x_noisy)
+        teacherT_feature3 = self.teacher_T(x_fm)
+
+
+        teacherF_feature1 = self.teacher_F(x_f)  #(barchsize,3)
+        teacherF_feature2 = self.teacher_F(x_noisy_f)
+        teacherF_feature3 = self.teacher_F(x_fm_f)
+
+        classify_feature = [score_feature1, score_feature2, score_feature3, score_feature4, score_feature5, score_feature6]
+        teacher_feature = [teacherT_feature1, teacherT_feature2, teacherT_feature3, teacherF_feature1, teacherF_feature2, teacherF_feature3]
+
+        # print("前向传播时间：",time.time()-begin_time)
+        return z1, z2, z3, z4, z5, z6, classify_feature, teacher_feature
 
 
 class ModelTrainer(nn.Module):
@@ -202,6 +254,7 @@ class ModelTrainer(nn.Module):
         early_stop_auc = 0
 
         with open(os.path.join(self.outf, self.model, self.dataset, "val_info.txt"), "w") as f:
+
             for epoch in range(self.niter):
                 self.cur_epoch += 1
 
@@ -227,7 +280,6 @@ class ModelTrainer(nn.Module):
 
                     # Test
                     ap_test, auc_test, Pre_test, Recall_test, f1_test = self.test()
-                    self.save_model(epoch)
 
                     if epoch == 1:
                         early_stop_auc = auc_test
@@ -257,6 +309,7 @@ class ModelTrainer(nn.Module):
                 print("val: pre:{:.4f} \t recall:{:.4f}  \t f1:{:.4f} \t".format(Pre, Recall, f1))
                 print("SVDD_fake_TF: pre:{:.4f} \t recall:{:.4f}  \t f1:{:.4f} \t".format(Pre_test, Recall_test,
                                                                                             f1_test))
+
                 # self.scheduler.step()
         # self.train_hist['total_time'].append(time.time() - start_time)
 
@@ -265,17 +318,13 @@ class ModelTrainer(nn.Module):
     def train_epoch(self):
 
         self.Backbone.train()
-
         epoch_iter = 0
-        begin_time = time.time()
-
         for data in self.dataloader["train"]:
             self.total_steps += self.opt.batchsize
             epoch_iter += 1
             self.set_input(data)
             self.optimize()
 
-        # print("one epoch训练时间：", time.time() - begin_time)
 
     def set_input(self, input, istrain=True):
         with torch.no_grad():
@@ -302,28 +351,43 @@ class ModelTrainer(nn.Module):
         return 2 - 2 * (x * y).sum(dim=-1)
 
     def update_net(self):
+
+
         self.optimizer.zero_grad()
 
         # 1.原数据 2.噪声 3.VA 4.频域原数据 5.频域噪声 6.频域VA
-        feature1, feature2, feature3, feature4, feature5, feature6, score_nomal, score_noise, score_fm, score_nomal_f, score_noise_f, score_fm_f = self.Backbone(
+        feature1, feature2, feature3, feature4, feature5, feature6, classify_feature,teacher_feature = self.Backbone(
             self.x, self.x_noisy,
             self.x_fm, self.x_f,
             self.x_noisy_f, self.x_fm_f)
+        # 1 svdd-loss
         loss_svdd, score = self.get_loss_score(feature1, feature2, feature3, feature4, feature5, feature6, self.c1)
 
-        # 增加分类任务，对feature1,3,5分类
-        loss_t = self.get_classification_loss_score(score_nomal, score_noise, score_fm, self.label,
-                                                   self.label_noise, self.label_vf)
-        loss_f = self.get_classification_loss_score(score_nomal_f, score_noise_f, score_fm_f, self.label,
-                                                   self.label_noise, self.label_vf)
-        a = self.opt.tf_percent #时域占比
-        self.loss = (1 - self.alpha) * loss_svdd + self.alpha * (a*loss_t+(1-a)*loss_f)
+        # 2 获取分类头和resnet的 softloss
+        loss_t_1 = self.get_softloss(classify_feature[0],teacher_feature[0])
+        loss_t_2 = self.get_softloss(classify_feature[1],teacher_feature[1])
+        loss_t_3 = self.get_softloss(classify_feature[2],teacher_feature[2])
+        loss_t = (loss_t_1 + loss_t_2 + loss_t_3)/3
+        loss_f_1 = self.get_softloss(classify_feature[3],teacher_feature[3])
+        loss_f_2 = self.get_softloss(classify_feature[4],teacher_feature[4])
+        loss_f_3 = self.get_softloss(classify_feature[5],teacher_feature[5])
+        loss_f = (loss_f_1 + loss_f_2 + loss_f_3) / 3
+        softloss = loss_t*self.opt.tf_percent + loss_f*(1-self.opt.tf_percent)
 
-        # 测试方法
-        # self.loss = (1 - self.alpha) * loss_svdd + self.alpha * loss_f
+
+        # 3 获取resnet hardloss
+        # resnet_t_loss1 = self.get_hardloss(teacher_feature[0],self.label)
+        # resnet_t_loss2 = self.get_hardloss(teacher_feature[1],self.label_noise)
+        # resnet_t_loss3 = self.get_hardloss(teacher_feature[2],self.label_vf)
+        # resnet_f_loss1 = self.get_hardloss(teacher_feature[3],self.label)
+        # resnet_f_loss2 = self.get_hardloss(teacher_feature[4],self.label_noise)
+        # resnet_f_loss3 = self.get_hardloss(teacher_feature[5],self.label_vf)
+        # hardloss = (resnet_t_loss1 + resnet_t_loss2 + resnet_t_loss3 + resnet_f_loss1 + resnet_f_loss2 + resnet_f_loss3) / 6
+
+
+        self.loss = (1 - self.alpha) * loss_svdd + self.alpha * (softloss)
 
         self.loss.backward()
-
         self.optimizer.step()
 
     def center_c(self, train_loader, eps=0.1):
@@ -344,7 +408,7 @@ class ModelTrainer(nn.Module):
                 x_noisy_f = x_noisy_f.float().to(self.device)
                 x_fm_f = x_fm_f.float().to(self.device)
 
-                outputs, z2, z3, outputs_f, z5, z6, _, _, _, _, _, _ = self.Backbone(x, x_noisy, x_fm, x_f, x_noisy_f, x_fm_f)
+                outputs, z2, z3, outputs_f, z5, z6, _, _ = self.Backbone(x, x_noisy, x_fm, x_f, x_noisy_f, x_fm_f)
                 n_samples += outputs.shape[0]
                 all_feature = torch.cat((outputs, outputs_f), dim=0)
                 # all_feature = outputs
@@ -408,9 +472,9 @@ class ModelTrainer(nn.Module):
         sigma_loss9 = torch.max(torch.zeros_like(sigma_aug9), (1 - sigma_aug9))
         loss_sigam3 = torch.mean((sigma_loss7 + sigma_loss8 + sigma_loss9) / 3)
 
-        loss_sigam = (loss_sigam1 + loss_sigam2 + loss_sigam3) / 3
+        # loss_sigam = (loss_sigam1 + loss_sigam2 + loss_sigam3) / 3
 
-        # loss_sigam = torch.mean((sigma_loss1 + sigma_loss4)/2)
+        loss_sigam = torch.mean((sigma_loss1 + sigma_loss4)/2)
 
 
         a = self.opt.tf_percent #时域占比
@@ -420,6 +484,7 @@ class ModelTrainer(nn.Module):
         # 总损失
         loss = F.relu(score)
         loss = torch.mean(loss)
+        # print("loss:", loss, torch.mean(loss_sigam))
         loss = 1 * loss + self.sigm * torch.mean(loss_sigam)
 
 
@@ -466,7 +531,7 @@ class ModelTrainer(nn.Module):
         auc_prc, roc_auc, Pre, Recall, f1, _ = evaluate(y_true, y_pred)
         return auc_prc, roc_auc, Pre, Recall, f1
 
-    def predict(self, dataloader):
+    def predict(self, dataloader, scale=False):
         with torch.no_grad():
             # 异常评分
             self.an_scores = torch.zeros(size=(len(dataloader.dataset),), dtype=torch.float32, device=self.device)
@@ -476,7 +541,7 @@ class ModelTrainer(nn.Module):
             for i, data in enumerate(dataloader, 0):
                 self.set_input(data, istrain=False)
                 #在预测中只有1和4有用
-                feature1, feature2, feature3, feature4, feature5, feature6, _, _, _,_,_,_ = self.Backbone(self.x,
+                feature1, feature2, feature3, feature4, feature5, feature6, _, _= self.Backbone(self.x,
                                                                                                     self.x_noisy,
                                                                                                     self.x_fm,
                                                                                                     self.x_f,
@@ -492,31 +557,22 @@ class ModelTrainer(nn.Module):
                 (i * self.opt.batchsize):(i * self.opt.batchsize + score.size(0))] = self.label.reshape(
                     score.size(0))
 
+            if scale:
+                self.an_scores = (self.an_scores - torch.min(self.an_scores)) / (
+                        torch.max(self.an_scores) - torch.min(self.an_scores))
+
             y_true = self.gt_labels.cpu().numpy()
             y_pred = self.an_scores.cpu().numpy()
 
             return y_true, y_pred
 
-    def get_classification_loss_score(self, score_nomal, score_noise, score_vf, y, y_noise, y_vf):
-        # score 128,3  label 128 直接给出0-2的下标即可
+    def get_softloss(self, score1, score2):
+        # input (batchsize,3)  (batchsize,3)
 
-        score = torch.cat((score_nomal, score_noise, score_vf), 0)
-        label = torch.cat((y, y_noise, y_vf), 0)
-        loss = F.cross_entropy(score, label)
+        loss = torch.sum((score1 - score2) ** 2)
 
         return loss
-    def save_model(self,epoch):
-        root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)) #/home/yangliu/project/vf-fake-promax
-        results_dir = '{}/ECG/{}/{}'.format(root_dir,self.opt.model, self.opt.dataset)
-        chk_dir = '{}/{}'.format(results_dir, "model")
-
-        seed_index = "SEED" + str(self.opt.seed)
-
-        model_result = {}
-        model_result[seed_index] = {}
-        model_result['Backbone'] = self.Backbone.state_dict()
-        model_result['c'] = self.c1
-        model_result['save_time'] = datetime.datetime.now()
-        model_result['save_epoch'] = epoch
-        print("保存模型:", chk_dir + '/alpha={}seed={}.pth'.format(self.opt.alpha, self.opt.seed))
-        torch.save(model_result, chk_dir + '/alpha={}seed={}.pth'.format(self.opt.alpha, self.opt.seed))
+    def get_hardloss(self, score, y):
+        # # input (batchsize,3)  (batchsize)
+        loss = F.cross_entropy(score, y)
+        return loss

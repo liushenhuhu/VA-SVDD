@@ -20,30 +20,31 @@ def load_vfdb_data(noisetest = False):
     noisy = noisy[:3030000].reshape(-1, 2500)  # 1212  2500
 
     len_all = len(noisy)+len(normal)
-    print("normal:",len(normal))
-    print("noise:",len(noisy))
-    print("ab:",len(data_X_va))
 
     # 噪声平均分配
-    # train_X = np.concatenate(((normal[0:len(normal) * 2 // 3]), (noisy[0:len(noisy) * 2 // 3])), axis=0)
-    # val_normal_X = np.concatenate((
-    #     normal[len(normal) * 2 // 3:len(normal) * 5 // 6], noisy[len(noisy) * 2 // 3:len(noisy) * 5 // 6]
-    # ), axis=0)
-    # val_abnormal_X = data_X_va[0:len(data_X_va) // 2]
-    # test_normal_X = np.concatenate((
-    #     normal[len(normal) * 5 // 6:], noisy[len(noisy) * 5 // 6:]
-    # ), axis=0)
-    # test_abnormal_X = data_X_va[len(data_X_va) // 2:]
+    train_X = np.concatenate(((normal[0:len(normal) * 2 // 3]), (noisy[0:len(noisy) * 2 // 3])), axis=0)
+
+    # resnet训练用
+    # train_X = normal
+
+    val_normal_X = np.concatenate((
+        normal[len(normal) * 2 // 3:len(normal) * 5 // 6], noisy[len(noisy) * 2 // 3:len(noisy) * 5 // 6]
+    ), axis=0)
+    val_abnormal_X = data_X_va[0:len(data_X_va) // 2]
+    test_normal_X = np.concatenate((
+        normal[len(normal) * 5 // 6:], noisy[len(noisy) * 5 // 6:]
+    ), axis=0)
+    test_abnormal_X = data_X_va[len(data_X_va) // 2:]
 
 
     # 原分配方案
-    train_X = (normal[0:len_all * 2 // 3])
-    val_normal_X = np.concatenate((normal[len_all * 2 // 3:-(len(normal)-len_all * 2 // 3)//2],
-                                  noisy[0:len(noisy) * 1 // 2]),axis=0)
-    val_abnormal_X = data_X_va[0:len(data_X_va) // 2]
-    test_normal_X = np.concatenate((normal[len_all * 2 // 3 + (len(normal)-len_all * 2 // 3)//2:],
-                                  noisy[len(noisy) * 1 // 2:]),axis=0)
-    test_abnormal_X = data_X_va[len(data_X_va) // 2:]
+    # train_X = (normal[0:len_all * 2 // 3])
+    # val_normal_X = np.concatenate((normal[len_all * 2 // 3:-(len(normal)-len_all * 2 // 3)//2],
+    #                               noisy[0:len(noisy) * 1 // 2]),axis=0)
+    # val_abnormal_X = data_X_va[0:len(data_X_va) // 2]
+    # test_normal_X = np.concatenate((normal[len_all * 2 // 3 + (len(normal)-len_all * 2 // 3)//2:],
+    #                               noisy[len(noisy) * 1 // 2:]),axis=0)
+    # test_abnormal_X = data_X_va[len(data_X_va) // 2:]
 
     return train_X, val_normal_X, val_abnormal_X, test_normal_X, test_abnormal_X,len(noisy)
 

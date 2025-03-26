@@ -1,8 +1,18 @@
 import os
 import numpy as np
 import torch
+from sklearn import metrics
 from sklearn.metrics import roc_curve, auc, average_precision_score, f1_score, classification_report, confusion_matrix, \
     precision_recall_fscore_support, precision_recall_curve, recall_score, accuracy_score
+
+
+
+def evaluate_resnet(labels, scores):
+    _, predicted = torch.max(scores, 1)  # 获取行最大值下标  0:x 1:noise 2:va
+    correct_num = (predicted == labels).squeeze().cpu().sum()
+
+    return correct_num / len(scores) # acc
+
 
 def evaluate(labels, scores, res_th=None, saveto=None,noisetest=False):
 

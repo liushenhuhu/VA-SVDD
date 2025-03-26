@@ -15,7 +15,7 @@ opt = Options().parse()
 
 #
 DATASETS_NAME = {
-    'vfdb': 1,
+    # 'vfdb': 1,
     'mitbih': 1,
     'cudb': 1
 }
@@ -61,7 +61,7 @@ if __name__ == '__main__':
     darasets_result = {}
     for dataset_name in list(DATASETS_NAME.keys()):
         if  dataset_name == 'vfdb':
-            # 0.8275 修改后的数据集划分
+            # 0.8275 82.51
             opt.lr = 0.002
             opt.batchsize = 32
         elif dataset_name == 'mitbih':

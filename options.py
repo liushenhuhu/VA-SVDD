@@ -47,7 +47,7 @@ class Options():
 
         self.parser.add_argument('--normal_idx', type=int, default=0, help='the label index of normaly')
         self.parser.add_argument('--niter', type=int, default=1000, help='number of epochs to train for')
-        self.parser.add_argument('--early_stop', type=int, default=200)
+        self.parser.add_argument('--early_stop', type=int, default=100)
 
         # 附加参数
         self.parser.add_argument('--seed', type=int, default=1)
