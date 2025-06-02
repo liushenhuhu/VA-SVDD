@@ -1,8 +1,8 @@
-# 无伪数据增强多分类 消融实验
-# 设置α为0，并去除sigmaloss中伪异常部分
+# 时频域双球心
 import os
 import sys
 import time
+from datetime import datetime
 
 import numpy as np
 import torch
@@ -47,16 +47,40 @@ class Encoder(nn.Module):
             output = self.main(input)
 
         return output
+class Encoder_F(nn.Module):
+    def __init__(self, ngpu, opt):
+        super(Encoder, self).__init__()
+        self.ngpu = ngpu
+        self.main = nn.Sequential(
+            nn.Conv1d(opt.nc, opt.ndf, 4, 2, 1, bias=False),  # (1,32,4) --> (32,)
+            nn.LeakyReLU(0.2, inplace=True),
+            nn.Conv1d(opt.ndf, opt.ndf * 2, 4, 2, 1, bias=False),  # 32,64
+            nn.BatchNorm1d(opt.ndf * 2),  # 归一化处理 参数为需要归一化的维度
+            nn.LeakyReLU(0.2, inplace=True),
+            nn.Conv1d(opt.ndf * 2, opt.ndf * 4, 4, 2, 1, bias=False),  # 64 ,128
+            nn.BatchNorm1d(opt.ndf * 4),
+            nn.LeakyReLU(0.2, inplace=True),
+            nn.Conv1d(opt.ndf * 4, opt.nz, 2, 1, 0, bias=False),  # 128,50
+            nn.AdaptiveAvgPool1d(1)  # 平均池化，将最低维度数转化为1个数  128,1
+        )
 
+    def forward(self, input):
+        if input.is_cuda and self.ngpu > 1:
+            output = nn.parallel.data_parallel(self.main, input, range(self.ngpu))
+        else:
+            output = self.main(input)
+
+        return output
 class classificationHead(nn.Module):
     def __init__(self, ngpu, opt):
         super(classificationHead, self).__init__()
+        self.temperature = opt.temperature
         self.classificationHead_l1 = nn.Linear(64, 16, bias=True)
         self.classificationHead_l2 = nn.Linear(16, 3, bias=True)
     def forward(self, z):
         out = self.classificationHead_l1(z)
         out = self.classificationHead_l2(out)
-        out = t_softmax(out)
+        out = t_softmax(out, temperature = self.temperature)
         return out
 class Teacher(nn.Module):
     def __init__(self, opt):
@@ -71,7 +95,7 @@ class Teacher(nn.Module):
         with torch.no_grad():
             out = self.resnet(z)
         out = self.clisificationHead(out)
-        out = t_softmax(out, temperature = self.temperature)
+        # out = t_softmax(out, temperature = self.temperature)
         return out
 class base_Model(nn.Module):
     def __init__(self, opt, device):
@@ -207,6 +231,7 @@ class ModelTrainer(nn.Module):
         self.cur_epoch = 0
 
         self.c1 = torch.zeros(self.opt.nz, device=self.device)
+        self.c2 = torch.zeros(self.opt.nz, device=self.device)
 
         # 输入时序信号
         self.x = torch.empty(size=(self.opt.batchsize, self.opt.nc, self.opt.isize), dtype=torch.float32,
@@ -217,12 +242,12 @@ class ModelTrainer(nn.Module):
         self.x_fm = torch.empty(size=(self.opt.batchsize, self.opt.nc, self.opt.isize), dtype=torch.float32,
                                 device=self.device)
         # 输入频域信号
-        self.x_f = torch.empty(size=(self.opt.batchsize, self.opt.nc, self.opt.isize), dtype=torch.float32,
+        self.x_f = torch.empty(size=(self.opt.batchsize, self.opt.nc, 1250), dtype=torch.float32,
                                      device=self.device)
         # 输入频域伪异常
-        self.x_noisy_f = torch.empty(size=(self.opt.batchsize, self.opt.nc, self.opt.isize), dtype=torch.float32,
+        self.x_noisy_f = torch.empty(size=(self.opt.batchsize, self.opt.nc, 1250), dtype=torch.float32,
                                      device=self.device)
-        self.x_fm_f = torch.empty(size=(self.opt.batchsize, self.opt.nc, self.opt.isize), dtype=torch.float32,
+        self.x_fm_f = torch.empty(size=(self.opt.batchsize, self.opt.nc, 1250), dtype=torch.float32,
                                      device=self.device)
         # 三种标签 0正常 1噪声
         self.label = torch.empty(size=(self.opt.batchsize,), dtype=torch.long, device=self.device)
@@ -280,7 +305,7 @@ class ModelTrainer(nn.Module):
 
                     # Test
                     ap_test, auc_test, Pre_test, Recall_test, f1_test = self.test()
-
+                    self.save_model(epoch)
                     if epoch == 1:
                         early_stop_auc = auc_test
 
@@ -294,7 +319,7 @@ class ModelTrainer(nn.Module):
                     break
 
                 if epoch < 1:
-                    self.c1 = self.center_c(self.dataloader["train"])
+                    self.c1,self.c2 = self.center_c(self.dataloader["train"])
 
 
                 f.write(
@@ -306,9 +331,9 @@ class ModelTrainer(nn.Module):
                         self.cur_epoch, self.loss, auc, ap, best_auc, best_ap,
                         best_auc_epoch, auc_test, ap_test,
                         early_stop_epoch))
-                print("val: pre:{:.4f} \t recall:{:.4f}  \t f1:{:.4f} \t".format(Pre, Recall, f1))
-                print("SVDD_fake_TF: pre:{:.4f} \t recall:{:.4f}  \t f1:{:.4f} \t".format(Pre_test, Recall_test,
-                                                                                            f1_test))
+                # print("val: pre:{:.4f} \t recall:{:.4f}  \t f1:{:.4f} \t".format(Pre, Recall, f1))
+                # print("SVDD_fake_TF: pre:{:.4f} \t recall:{:.4f}  \t f1:{:.4f} \t".format(Pre_test, Recall_test,
+                #                                                                             f1_test))
 
                 # self.scheduler.step()
         # self.train_hist['total_time'].append(time.time() - start_time)
@@ -361,7 +386,7 @@ class ModelTrainer(nn.Module):
             self.x_fm, self.x_f,
             self.x_noisy_f, self.x_fm_f)
         # 1 svdd-loss
-        loss_svdd, score = self.get_loss_score(feature1, feature2, feature3, feature4, feature5, feature6, self.c1)
+        loss_svdd, score = self.get_loss_score(feature1, feature2, feature3, feature4, feature5, feature6, self.c1,self.c2)
 
         # 2 获取分类头和resnet的 softloss
         loss_t_1 = self.get_softloss(classify_feature[0],teacher_feature[0])
@@ -374,18 +399,7 @@ class ModelTrainer(nn.Module):
         loss_f = (loss_f_1 + loss_f_2 + loss_f_3) / 3
         softloss = loss_t*self.opt.tf_percent + loss_f*(1-self.opt.tf_percent)
 
-
-        # 3 获取resnet hardloss
-        # resnet_t_loss1 = self.get_hardloss(teacher_feature[0],self.label)
-        # resnet_t_loss2 = self.get_hardloss(teacher_feature[1],self.label_noise)
-        # resnet_t_loss3 = self.get_hardloss(teacher_feature[2],self.label_vf)
-        # resnet_f_loss1 = self.get_hardloss(teacher_feature[3],self.label)
-        # resnet_f_loss2 = self.get_hardloss(teacher_feature[4],self.label_noise)
-        # resnet_f_loss3 = self.get_hardloss(teacher_feature[5],self.label_vf)
-        # hardloss = (resnet_t_loss1 + resnet_t_loss2 + resnet_t_loss3 + resnet_f_loss1 + resnet_f_loss2 + resnet_f_loss3) / 6
-
-
-        self.loss = (1 - self.alpha) * loss_svdd + self.alpha * (softloss)
+        self.loss = loss_svdd + self.alpha * (softloss)
 
         self.loss.backward()
         self.optimizer.step()
@@ -394,7 +408,7 @@ class ModelTrainer(nn.Module):
         """Initialize hypersphere center c as the mean from an initial forward pass on the data."""
         n_samples = 0
         c = torch.zeros(64, device=self.device)
-
+        c2 = torch.zeros(64, device=self.device)
         self.Backbone.eval()
 
         with torch.no_grad():
@@ -410,53 +424,79 @@ class ModelTrainer(nn.Module):
 
                 outputs, z2, z3, outputs_f, z5, z6, _, _ = self.Backbone(x, x_noisy, x_fm, x_f, x_noisy_f, x_fm_f)
                 n_samples += outputs.shape[0]
-                all_feature = torch.cat((outputs, outputs_f), dim=0)
-                # all_feature = outputs
-                c += torch.sum(all_feature, dim=0)
 
-        c /= (2 * n_samples)
+                c += torch.sum(outputs, dim=0)
+                c2 += torch.sum(outputs_f, dim=0)
+
+        c /= n_samples
+        c2 /= n_samples
 
         # If c_i is too close to 0, set to +-eps. Reason: a zero unit can be trivially matched with zero weights.
         c[(abs(c) < eps) & (c < 0)] = -eps
         c[(abs(c) < eps) & (c > 0)] = eps
+        c2[(abs(c2) < eps) & (c2 < 0)] = -eps
+        c2[(abs(c2) < eps) & (c2 > 0)] = eps
+        return c, c2
 
-        return c
-
-    def get_loss_score(self, feature1, feature2, feature3, feature4, feature5, feature6, center):
+    def get_loss_score(self, feature1, feature2, feature3, feature4, feature5, feature6, center,center_f):
+        a = self.opt.tf_percent  # 时域占比
 
         center = center.unsqueeze(0)  # 添加维度
         center = F.normalize(center, dim=1)  # 归一化
+        center_f = center_f.unsqueeze(0)  # 添加维度
+        center_f = F.normalize(center_f, dim=1)  # 归一化
+
         feature1 = F.normalize(feature1, dim=1)
-
+        feature2 = F.normalize(feature2, dim=1)
+        feature3 = F.normalize(feature3, dim=1)
         feature4 = F.normalize(feature4, dim=1)
-
-        distance1 = 1 - F.cosine_similarity(feature1, center, eps=1e-6)
-
-        distance4 = 1 - F.cosine_similarity(feature4, center, eps=1e-6)
+        feature5 = F.normalize(feature5, dim=1)
+        feature6 = F.normalize(feature6, dim=1)
+        feature7 = feature1 + feature5  # 原数据+ 频域噪声
+        feature8 = feature4 + feature3  # VA + 频域原数据
+        feature9 = feature3 + feature6  # 噪声 + 频域VA
 
         # 防止模型过拟合
         sigma_aug1 = torch.sqrt(feature1.var([0]) + 0.0001)
-
+        sigma_aug2 = torch.sqrt(feature2.var([0]) + 0.0001)
+        sigma_aug3 = torch.sqrt(feature3.var([0]) + 0.0001)
         sigma_aug4 = torch.sqrt(feature4.var([0]) + 0.0001)
+        sigma_aug5 = torch.sqrt(feature5.var([0]) + 0.0001)
+        sigma_aug6 = torch.sqrt(feature6.var([0]) + 0.0001)
+        sigma_aug7 = torch.sqrt(feature7.var([0]) + 0.0001)
+        sigma_aug8 = torch.sqrt(feature8.var([0]) + 0.0001)
+        sigma_aug9 = torch.sqrt(feature9.var([0]) + 0.0001)
 
         sigma_loss1 = torch.max(torch.zeros_like(sigma_aug1), (1 - sigma_aug1))
+        sigma_loss2 = torch.max(torch.zeros_like(sigma_aug2), (1 - sigma_aug2))
+        sigma_loss3 = torch.max(torch.zeros_like(sigma_aug3), (1 - sigma_aug3))
+        loss_sigam1 = torch.mean((sigma_loss1 + sigma_loss2 + sigma_loss3) / 3)
 
         sigma_loss4 = torch.max(torch.zeros_like(sigma_aug4), (1 - sigma_aug4))
+        sigma_loss5 = torch.max(torch.zeros_like(sigma_aug5), (1 - sigma_aug5))
+        sigma_loss6 = torch.max(torch.zeros_like(sigma_aug6), (1 - sigma_aug6))
+        loss_sigam2 = torch.mean((sigma_loss4 + sigma_loss5 + sigma_loss6) / 3)
 
-        # loss_sigam = (loss_sigam1 + loss_sigam2 + loss_sigam3) / 3
+        sigma_loss7 = torch.max(torch.zeros_like(sigma_aug7), (1 - sigma_aug7))
+        sigma_loss8 = torch.max(torch.zeros_like(sigma_aug8), (1 - sigma_aug8))
+        sigma_loss9 = torch.max(torch.zeros_like(sigma_aug9), (1 - sigma_aug9))
+        loss_sigam3 = torch.mean((sigma_loss7 + sigma_loss8 + sigma_loss9) / 3)
 
-        loss_sigam = torch.mean((sigma_loss1 + sigma_loss4)/2)
+        # loss_sigam = torch.mean(a * sigma_loss1 + (1 - a) * sigma_loss4)
+        loss_sigam = (loss_sigam1 + loss_sigam2 + loss_sigam3) / 3
 
+        distance1 = 1 - F.cosine_similarity(feature1, center, eps=1e-6)
+        distance4 = 1 - F.cosine_similarity(feature4, center_f, eps=1e-6)
 
-        a = self.opt.tf_percent #时域占比
         # score
         score = a * distance1 + (1-a)*distance4
 
         # 总损失
         loss = F.relu(score)
-        loss = torch.mean(loss)
+        loss = torch.mean(loss) + self.sigm *loss_sigam
         # print("loss:", loss, torch.mean(loss_sigam))
-        loss = 1 * loss + self.sigm * torch.mean(loss_sigam)
+
+
 
         return loss, score
 
@@ -504,7 +544,7 @@ class ModelTrainer(nn.Module):
                                                                                                     self.x_noisy_f,
                                                                                                     self.x_fm_f)
 
-                _, score = self.get_loss_score(feature1, feature2, feature3, feature4, feature5, feature6, self.c1)
+                _, score = self.get_loss_score(feature1, feature2, feature3, feature4, feature5, feature6, self.c1,self.c2)
 
                 self.an_scores[
                 (i * self.opt.batchsize):(i * self.opt.batchsize + score.size(0))] = score.reshape(
@@ -522,13 +562,31 @@ class ModelTrainer(nn.Module):
 
             return y_true, y_pred
 
-    def get_softloss(self, score1, score2):
+    def get_softloss(self, feature1, feature2):
         # input (batchsize,3)  (batchsize,3)
+        # feature1 = F.log_softmax(feature1, dim=1)
+        # kl_loss = nn.KLDivLoss(reduction='batchmean')
 
-        loss = torch.sum((score1 - score2) ** 2)
+        loss_distill = F.mse_loss(feature1,feature2)
 
-        return loss
+        return loss_distill
     def get_hardloss(self, score, y):
         # # input (batchsize,3)  (batchsize)
         loss = F.cross_entropy(score, y)
         return loss
+    def save_model(self,epoch):
+        root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)) #/home/yangliu/project/vf-fake-promax
+        results_dir = '{}/ECG/{}/{}'.format(root_dir,self.opt.model, self.opt.dataset)
+        chk_dir = '{}/{}'.format(results_dir, "model")
+
+        seed_index = "SEED" + str(self.opt.seed)
+
+        model_result = {}
+        model_result[seed_index] = {}
+        model_result['Backbone'] = self.Backbone.state_dict()
+        model_result['c1'] = self.c1
+        model_result['c2'] = self.c2
+        model_result['save_time'] = datetime.now()
+        model_result['save_epoch'] = epoch
+        print("保存模型:", chk_dir + '/alpha={}seed={}.pth'.format(self.opt.alpha, self.opt.seed))
+        torch.save(model_result, chk_dir + '/alpha={}seed={}.pth'.format(self.opt.alpha, self.opt.seed))

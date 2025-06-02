@@ -15,7 +15,7 @@ opt = Options().parse()
 
 #
 DATASETS_NAME = {
-    # 'vfdb': 1,
+    'vfdb': 1,
     'mitbih': 1,
     'cudb': 1
 }
@@ -30,7 +30,8 @@ SEEDS = [
 # 主实验
 if __name__ == '__main__':
 
-    # opt.lr =0.00001
+    # opt.lr =0.00001 -+
+
     # opt.batchsize = 32
     opt.nz = 64
     opt.isMasked = False

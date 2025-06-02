@@ -15,7 +15,7 @@ opt = Options().parse()
 
 #
 DATASETS_NAME = {
-    # 'vfdb': 1,
+    'vfdb': 1,
     'mitbih': 1,
     'cudb': 1
 }
@@ -35,14 +35,15 @@ if __name__ == '__main__':
     opt.is_all_data = True
     opt.augmentation = 'mask'  # mask lr hrv no
     opt.NT = device
-    opt.model = 'VASVDD_KD'
+    opt.model = 'VASVDD_KD_dualC'
+    opt.early_stop = 200
 
-    opt.alpha = 0 # 辅助任务LOSS占比
-    opt.sigm = 0.2 # 防止过拟合
-    opt.tf_percent =0.5 # loss中时域占比
+    opt.alpha = 1000 # 辅助任务LOSS 系数
+    opt.sigm = 8  # 防止过拟合
+    opt.tf_percent =0.8  # loss中时域占比0.9
 
-    opt.batchsize = 64
-    opt.lr = 0.0001
+
+
 
     if opt.model == 'SVDD_fake_TF':
         from model.SVDD_fake_TF import ModelTrainer
@@ -56,7 +57,13 @@ if __name__ == '__main__':
         opt.nz_m = 32
     elif opt.model == 'VASVDD_KD':
         from model.VASVDD_KD import ModelTrainer
-        opt.temperature = 0.5 # Tsoftmax
+        opt.temperature = 0.2 # Tsoftmax
+        opt.augmentation = 'fake'  # mask lr hr no fft
+        opt.nz = 64
+        opt.nz_m = 32
+    elif opt.model == 'VASVDD_KD_dualC':
+        from model.VASVDD_KD_dualC import ModelTrainer
+        opt.temperature = 2 # Tsoftmax
         opt.augmentation = 'fake'  # mask lr hr no fft
         opt.nz = 64
         opt.nz_m = 32
@@ -66,17 +73,14 @@ if __name__ == '__main__':
     darasets_result = {}
     for dataset_name in list(DATASETS_NAME.keys()):
         if  dataset_name == 'vfdb':
-            pass
-            # opt.lr = 0.002
-            # opt.batchsize = 32
+            opt.lr = 0.002
+            opt.batchsize = 32
         elif dataset_name == 'mitbih':
-            pass
-            # opt.lr = 0.005
-            # opt.batchsize = 128
+            opt.lr = 0.005
+            opt.batchsize = 128
         elif dataset_name == 'cudb':
-            pass
-            # opt.lr = 0.0003
-            # opt.batchsize = 128
+            opt.lr = 0.0003
+            opt.batchsize = 128
         results_dir = './ECG/{}/{}'.format(opt.model, dataset_name)
 
         opt.outf = results_dir

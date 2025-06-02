@@ -20,29 +20,6 @@ class RawDataset(data.Dataset):
     def __len__(self):
         return self.X.size(0)
 
-class RawDataset2(data.Dataset):
-    def __init__(self, X, Y):
-        self.X = torch.Tensor(X)
-        self.X_f = to_frequency(X)
-        self.Y = torch.Tensor(Y)
-    def __getitem__(self, index):
-
-
-        return self.X[index], self.X[index], self.X[index], self.X_f[index],self.X[index],self.X[index],self.Y[index],self.Y[index],self.Y[index]
-    def __len__(self):
-        return self.X.size(0)
-
-
-def frequency_modulate(time, signal, frequency_base, modulation_index):
-    # frequency_base 是信号的基础频率
-    # modulation_index 是调频指数，它决定了频率的变化程度
-
-    # 生成一个频率随信号变化的频率信号
-    modulated_frequency = frequency_base + modulation_index * signal
-
-    # 产生FM调制信号
-    modulated_signal = np.cos(2 * np.pi * modulated_frequency * time)
-    return modulated_signal
 
 def frequency_modulate2(signal,x_length, frequency_base,
                         fm_modulation_index, am_modulation_index, am_frequency_modulation,
@@ -66,17 +43,18 @@ def frequency_modulate2(signal,x_length, frequency_base,
 
     return vfake_signal
 def to_frequency(signal):
-    # 原方法 只是降采样
-    # signal = pywt.wavedec(signal, 'db4', level=2)[0]
+    # 原方法
+    signal = pywt.wavedec(signal, 'db1', level=1)[0]
 
 
-    for i in range(len(signal)):
-        _, signal[i] = ecg_to_freq_domain(signal[i], method='fft_amp')
-        # _,signal[i] = ecg_to_freq_domain(signal[i],method='fft_complex')
-        # _, signal[i] = ecg_to_freq_domain(signal[i], method='psd', nperseg = 512)
-
-    signal = signal.reshape(-1, 1,signal.shape[-1])
+    # for i in range(len(signal)):
+    #     _, signal[i] = ecg_to_freq_domain(signal[i], method='fft_amp')
+    #     # _,signal[i] = ecg_to_freq_domain(signal[i],method='fft_complex')
+    #     # _, signal[i] = ecg_to_freq_domain(signal[i], method='psd', nperseg = 512)
+    #
+    # signal = signal.reshape(-1, 1,signal.shape[-1])
     return signal
+
 
 
 def ecg_to_freq_domain(signal, fs=360, method='fft_amp', nperseg=None):
@@ -106,20 +84,7 @@ def ecg_to_freq_domain(signal, fs=360, method='fft_amp', nperseg=None):
         raise ValueError("Method must be 'fft_amp', 'fft_complex' or 'psd'")
 
     return freqs, spectrum
-def wavelet_transform_ecg(ecg_signal, wavelet='db6', level=6):
-    # 进行小波变换
-    coeffs = pywt.wavedec(ecg_signal, wavelet, level=level)
 
-    # 仅保留细节系数（高频信息），去除逼近系数（低频）
-    coeffs[0] = np.zeros_like(coeffs[0])  # 将最低频率部分设为0
-
-    # 进行小波重构，得到频域信号
-    freq_signal = pywt.waverec(coeffs, wavelet)
-
-    # 确保输出长度与输入一致
-    freq_signal = freq_signal[:len(ecg_signal)]
-
-    return freq_signal
 class TransformDataset_SelectChannel:
     def __init__(self, x, y, snr, fs, amplitude, p, min_winsize, is_selectwin, line_num):
         x_length =x.shape[-1]
